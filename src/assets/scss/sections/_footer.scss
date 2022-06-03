@@ -1,0 +1,25 @@
+
+.footer {
+   $parent: &;
+
+   background: #fff;
+   &__copyright {
+      font-size: rem(18);
+      font-weight: 300;
+
+      max-width: rem(310);
+
+      text-transform: uppercase;
+   }
+   &__row {
+      display: flex;
+
+      padding: rem(60) 0;
+
+      align-items: center;
+      justify-content: space-between;
+   }
+   &__logo {
+      width: rem(140);
+   }
+}

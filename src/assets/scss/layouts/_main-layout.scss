@@ -1,0 +1,34 @@
+.main-layout {
+   display: flex;
+   flex-direction: column;
+
+   min-height: 100vh;
+
+@include lg-block() {
+      overflow: hidden;
+   }
+   .footer {
+      margin-top: auto;
+   }
+
+   &__content {
+      position: relative;
+
+      // perspective: 100px;
+      section:not(.section-no-margin) {
+         margin-bottom: rem(80);
+      }
+   }
+}
+.main-layout__content {
+   transition: opacity 0.1s $anim;
+
+   opacity: 0;
+}
+
+
+.is-loaded {
+   .main-layout__content {
+      opacity: 1;
+   }
+}

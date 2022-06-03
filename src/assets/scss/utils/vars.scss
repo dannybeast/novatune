@@ -1,0 +1,47 @@
+// Fonts
+$main-font: 'Geometria', sans-serif;
+//$accent-font: 'PT Sans Narrow', sans-serif;
+$main-font-color: #1d3753;
+$main-font-size: 16px;
+$main-font-weight: 400;
+$main-line-height: 1.5;
+
+
+// Abstract colors
+$primary-color: #ffd117;
+$accent-color: #00b1c5;
+$gray-color: #eee;
+$white-color: #fff;
+$black-color: #000;
+$success-color: #1ec16f;
+$danger-color: rgb(245, 45, 45);
+$warning-color: orange;
+$border-base: #c4c4c4;
+$violet-color: #a483e2;
+$light-color: #effafb;
+
+
+// Main colors
+$background-color: $light-color;
+
+
+// Animations
+$anim: cubic-bezier(0.58, 0.3, 0.005, 1);
+$animSpeed: 0.3s;
+
+
+// fields
+$field-margin: 25px;
+$field-border-width: 2px;
+$field-border-color: $border-base;
+$field-color-danger: $danger-color;
+$field-radius: 0;
+$field-bg: transparent;
+
+
+// Radius
+$radius-base: 8px;
+
+// Shadow
+$shadow-base: 12px 22px 32px rgba(0, 0, 0, 0.07);
+$header-size-mobile: 105px;

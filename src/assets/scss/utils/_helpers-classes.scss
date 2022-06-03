@@ -1,0 +1,57 @@
+.color-primary {
+   color: $primary-color;
+}
+.color-primary-light {
+   color: lighten($primary-color, 25%);
+}
+.color-danger {
+   color: $danger-color;
+}
+.color-black {
+   color: #000;
+}
+.color-blue {
+   color: #357edb;
+}
+
+.color-white {
+   color: #fff;
+}
+
+.color-gray {
+   color: #b9b7bd;
+}
+
+.text-uppercase {
+   text-transform: uppercase;
+}
+
+.nowrap {
+   white-space: nowrap;
+}
+
+.italic {
+   font-style: italic;
+}
+
+.bold,
+.strong {
+   font-weight: 700;
+}
+
+.medium {
+   font-weight: 500;
+}
+
+.semibold {
+   font-weight: 600;
+}
+.hide-sm {
+   @include sm-block() {
+      display: none;
+   }
+}
+
+.hide {
+   display: none;
+}
