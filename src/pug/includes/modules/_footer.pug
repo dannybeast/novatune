@@ -1,9 +1,25 @@
 +b.FOOTER.footer 
   .container
-      +e.row 
-      
-         +e.A(href="index.html" class="logo")
-           img(src="assets/images/logo/logo-dark.svg", alt="")
 
-    
-         +e.P.copyright © <span class="js-current-year"></span>, Все права защищены Спортсмен кубани
+    +e.row 
+
+      +e.A(href="index.html" class="logo")
+        img(src="assets/images/logo/logo.png", alt="")
+
+
+      +e.element
+       +e.address г. Москва, Можайское шоссе, вл.166 
+
+      +e.element
+       +e.A(href="tel:+74956464489" class="phone") +7 (495) 646-44-89
+
+      +e.element
+       +b.A(href="#" class="btn --primary-line __btn") Заказать звонок
+
+    +e.row 
+
+     +e.P.copyright © <span class="js-current-year"></span>, Все права защищены. NOVATUNE.
+
+     +e.UL.bottom-links
+      +e.LI
+       a(href="#") Правила обработки персональных данных

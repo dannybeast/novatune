@@ -2,24 +2,83 @@
 .footer {
    $parent: &;
 
-   background: #fff;
-   &__copyright {
-      font-size: rem(18);
-      font-weight: 300;
+   font-size: 14px;
 
-      max-width: rem(310);
+   padding: rem(80) 0;
 
-      text-transform: uppercase;
+   a {
+      color: #000;
    }
+   &__copyright {
+      opacity: 0.5;
+
+@include sm-block() {
+         width: 100%;
+         margin-bottom: rem(15);
+
+         text-align: center;
+      }
+   }
+   &__phone {
+      font-weight: 700;
+
+      white-space: nowrap;
+
+      color: #0b6fd1 !important;
+   }
+
    &__row {
       display: flex;
 
-      padding: rem(60) 0;
+      margin-bottom: rem(40);
 
-      align-items: center;
+@include sm-block() {
+         flex-wrap: wrap;
+      }  align-items: center;
       justify-content: space-between;
+
+      &:last-child {
+         margin-bottom: 0;
+      }
+   }
+   &__element {
+      margin-left: rem(40);
+
+@include sm-block() {
+         width: 100%;
+         margin-bottom: rem(20);
+         margin-left: 0;
+
+         text-align: center;
+      }
+   }
+   &__bottom-links {
+      @include sm-block() {
+         width: 100%;
+
+         text-align: center;
+      }
+
+      a {
+         transition: opacity 0.2s ease;
+
+         opacity: 0.5;
+         border-bottom: 1px solid rgba(#000 , 0.5);
+         &:hover {
+            opacity: 1;
+         }
+      }
    }
    &__logo {
-      width: rem(140);
+      display: block;
+
+      width: rem(200);
+      margin-right: auto;
+
+@include sm-block() {
+         margin-right: auto;
+         margin-bottom: rem(30);
+         margin-left: auto;
+      }
    }
 }

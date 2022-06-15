@@ -4,9 +4,12 @@
 
    min-height: 100vh;
 
+   background: url('../images/bg/bg.png') top right -15% no-repeat;
+
 @include lg-block() {
       overflow: hidden;
    }
+
    .footer {
       margin-top: auto;
    }

@@ -1,0 +1,205 @@
+$fieldHeight: rem(46);
+
+// Field
+@mixin inputBase() {
+   font-family: $main-font;
+   font-size: rem(18);
+
+   position: relative;
+
+   display: block;
+
+   width: 100%;
+   height: $fieldHeight;
+   padding-left: rem(20);
+
+   transition: background $animSpeed $anim;
+   text-overflow: ellipsis;
+
+   border: 1px solid $border-base;
+   border-radius: rem(8);
+   background: $white-color;
+   &:focus,
+   &:hover {
+      outline: none !important;
+   }
+
+   &::placeholder {
+      font-weight: 300;
+
+      color: #ddd;
+   }
+   &:not(.field--error):hover {
+      border-color: darken($border-base, 15%);
+      background: rgba($white-color, 0.8);
+   }
+   &:not(.field--error).is-focus {
+      border-color: $primary-color;
+   }
+}
+
+@keyframes errorInput {
+   0% {
+      transform: translateX(0);
+   }
+
+   50% {
+      transform: translateX(-6px);
+   }
+
+   100% {
+      transform: translateX(6px);
+   }
+}
+
+.field-label {
+   font-size: rem(22px);
+   font-weight: 350;
+   line-height: 1.15;
+
+   display: block;
+
+   letter-spacing: 0.03em;
+
+   color: $black;
+
+@include sm-block() {
+      font-size: rem(18px);
+   }
+
+   &.strong {
+      font-weight: 500;
+   }
+}
+
+.field {
+   $parent: &;
+   .field-label {
+      margin-bottom: rem(15);
+
+@include sm-block() {
+         margin-bottom: rem(10);
+      }
+   }
+   input,
+   select,
+   textarea {
+      @include inputBase();
+   }
+
+   & >textarea {
+      overflow: hidden;
+
+      min-height: rem(220);
+      padding-top: 10px;
+
+      resize: vertical;
+
+@include sm-block() {
+         min-height: rem(150);
+      }
+   }
+
+
+   &__error {
+      line-height: 1.2;
+
+      display: none !important;
+
+      padding-top: 5px;
+
+      color: $danger-color;
+   }
+
+   &.is-error {
+      animation: errorInput 0.2s cubic-bezier(0.6, 0.2, 0.1, 1);
+
+      will-change: transform;
+
+      input,
+      select,
+      textarea {
+         border-color: $danger-color;
+         background: lighten($danger-color,40%);
+      }
+      .field-label {
+         color: $danger-color;
+      }
+      .checkbox {
+         color: $danger-color;
+         span {
+            &:before {
+               border-color: $danger-color;
+            }
+         }
+      }
+   }
+}
+
+.messages {
+   display: none !important;
+}
+.field-group {
+   position: relative;
+   input {
+      padding-right: $fieldHeight;
+   }
+   &__after {
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      display: flex;
+
+      width: $fieldHeight;
+      height: $fieldHeight;
+
+      cursor: pointer;
+
+      align-items: center;
+      justify-content: center;
+      svg {
+         width: rem(20);
+         height: rem(20);
+
+         transition: fill $anim $animSpeed;
+
+         fill: $primary-color;
+      }
+      &:hover {
+         svg {
+            fill: $main-font-color;
+         }
+      }
+   }
+}
+.datepicker-field {
+   position: relative;
+   &__input {
+      font-size: rem(24) !important;
+      font-weight: 500;
+
+      padding-right: rem(40);
+      padding-left: rem(40) !important;
+
+      text-align: center;
+   }
+   &:after {
+      position: absolute;
+      top: 50%;
+      right: rem(15);
+
+      width: rem(20);
+      height: rem(20);
+
+      content: '';
+      transform: translateY(-50%);
+      pointer-events: none;
+
+      background-color: transparent;
+      background-image: svg-load('../icons/datepicker.svg', fill=$primary-color);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 70%;
+   }
+}

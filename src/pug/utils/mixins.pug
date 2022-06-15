@@ -8,3 +8,9 @@
 mixin icon(name)
   svg.svg-icon
     use(href=`assets/icons/sprite.svg#icon-${name}`)
+
+mixin services-item(obj)
+ +b.A.services-item(href="service.html" style=`background-image:url('${obj.img}')`) 
+  +e.inner
+   +e.title=obj.title
+   +e.price <span>Цена:</span> #{obj.price}

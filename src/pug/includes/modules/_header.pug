@@ -1,16 +1,18 @@
 // Header
 +b.HEADER.header 
- +e.row
+ .container
+  +e.row
 
-   +e.sponsor
-    +e.A(href="https://www.rncb.ru/" class="sponsor-logo" target="_blank")
-      img(src="assets/images/logo/rnkb.svg", alt="Генеральный спонсор РНКБ")
-    +e.sponsor-desc Генеральный спонсор
+   +e.A(href="index.html" class="logo")
+    img(src="assets/images/logo/logo.png", alt="")
 
    include _hamburger
    
-   +e.UL.navigation 
-    +e.LI 
-     +e.A(href="#about" class=" js-anchor") О премии
-    +e.LI 
-     +e.A(href="#partners" class=" js-anchor") Партнеры
+   +e.element
+    +e.address г. Москва, Можайское шоссе, вл.166 
+
+   +e.element
+    +e.A(href="tel:+74956464489" class="phone") +7 (495) 646-44-89
+
+   +e.element
+    +b.A(href="#" class="btn --primary-gradient __btn") Заказать звонок

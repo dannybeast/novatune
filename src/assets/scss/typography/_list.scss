@@ -7,7 +7,7 @@
    li {
       position: relative;
 
-      margin-bottom: rem(15px);
+      margin-bottom: rem(10px);
       padding-left: rem(25px);
       ul {
          margin-top: rem(10px);
@@ -24,33 +24,17 @@
 
       &:before {
          position: absolute;
-         top: 0.45em;
+         top: 0.70em;
          left: 0;
 
          display: block;
 
-         width: rem(8px);
-         height: rem(8px);
+         width: rem(12px);
+         height: rem(2px);
 
          content: '';
 
-         border-radius: 50%;
          background: $primary-color;
-      }
-   }
-   &_primary {
-      li {
-         &:before {
-            background: $primary-color !important;
-         }
-      }
-   }
-   &_light {
-      li {
-         color: rgba(#000, 0.6);
-         &:before {
-            background: #e6ded3 !important;
-         }
       }
    }
 }
@@ -66,7 +50,7 @@
    li {
       position: relative;
 
-      margin-bottom: rem(15px);
+      margin-bottom: rem(10px);
       padding-left: rem(25px);
 
       list-style: none;
