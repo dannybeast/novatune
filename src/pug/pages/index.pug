@@ -4,220 +4,77 @@ block variables
     - var title = 'Мультимедиа для BMW 530d';
     - var description = 'Мультимедиа для BMW 530d';
     - var pageName = 'index';
+    - var bodyClass = 'is-page-index'
 
 block content
 
- +b.SECTION 
+ +b.SECTION.main-intro
   .container 
 
-   +b.page-top 
-    +e.col 
-     +b.H1.title(class="__title") <span class="color-primary">Мультимедиа</span> для BMW 530d
-    +e.col 
-     +b.breadcrumbs(class="__breadcrumbs")
-      a(href="#") Главная
-      +e.separator / 
-      span Услуги Novatune 
 
-   +b.typography
-    p Используйте новейшие информационные и развлекательные комплексы в автомобиле! Техцентр «NOVATUNE» предлагает установку полного спектра мультимедиа систем и дооснащение любых марок авто оригинальными опциями, не установленными производителем, с сохранением заводской гарантии.
-    p Используйте новейшие информационные и развлекательные комплексы в автомобиле! Техцентр «NOVATUNE» предлагает установку полного спектра мультимедиа систем и дооснащение любых марок авто оригинальными опциями, не установленными производителем, с сохранением заводской гарантии. Используйте новейшие информационные и развлекательные комплексы в автомобиле! Техцентр «NOVATUNE» предлагает установку полного спектра мультимедиа систем и дооснащение любых марок авто оригинальными опциями, не установленными производителем, с сохранением заводской гарантии.
- 
+ +b.SECTION.why
+  .container 
+
+
+
+ include ../includes/modules/_models
+
+ include ../includes/modules/_complex
+
  +b.SECTION.services
   -
    var services = [
     {
-     title: 'Камера заднего вида на BMW 530D',
-     price: 'по запросу',
-     img: 'assets/images/services/1.png'
-    },
-    {
-     title: 'Автозапуск: охранно-сервисная система BMW 530D',
-     price: 'по запросу',
-     img: 'assets/images/services/2.png'
-    },
-    {
-     title: 'Цифровое ТВ BMW 530D',
-     price: 'по запросу',
-     img: 'assets/images/services/3.png'
-    },
-    {
-     title: 'Видеорегистратор BMW Advanced Car Eye 2.0 BMW 530D',
-     price: 'по запросу',
-     img: 'assets/images/services/4.png'
-    },
-    {
-     title: 'Камеры кругового обзора на BMW 530D',
-     price: 'по запросу',
-     img: 'assets/images/services/5.png'
-    },
-    {
-     title: 'Система мультимедиа MGU и LED приборная панель BMW 530D',
-     price: 'по запросу',
-     img: 'assets/images/services/6.png'
+     title: 'Навигационно-мультимедийные системы для штатных мониторов',
+     img: 'assets/images/work/2.png'
+    },{
+     title: 'Расширенный CarPlay и Android Auto в любой авто',
+     img: 'assets/images/work/3.png'
+    },{
+     title: 'Автоматические доводчики дверей',
+     img: 'assets/images/work/4.png'
+    },{
+     title: 'Авто-ателье перетяжка и перешив салона, офис на колесах',
+     img: 'assets/images/work/5.png'
+    },{
+     title: 'Внешний тюнинг, обвесы, карбон',
+     img: 'assets/images/work/17.png'
+    },{
+     title: 'Автосвет, подсветка, диоды, ambient light',
+     img: 'assets/images/work/7.png'
+    },{
+     title: 'Тонировка пленкой, атермальная и электро-тонировка',
+     img: 'assets/images/work/8.png'
+    },{
+     title: 'Установка комплексных систем защиты авто',
+     img: 'assets/images/work/9.png'
     }
    ]
   .container 
    +e.row 
+    +e.col 
+     +b.H3.title Услуги <br>novatune
+     +e.desc С гарантией качества на срок владения автомобилем.
+
+     +b.A(href="#" class="btn --primary-line --skew --large __btn") 
+       span Перейти в каталог
+
     each obj in services
      +e.col 
       +services-item(obj)
 
- +b.SECTION.content
+ include ../includes/modules/_works-accordion
+
+ +b.SECTION.setup-center 
   .container 
-   +e.row 
-    +e.text.typography 
-     h3 Мультимедиа,<br> дооснащение BMW 5<br> серия G30 lci
-     p В штатной комплектации очень часто не хватает опций, которые значительно повышают комфорт во время эксплуатации автомобиля, а порой становятся просто необходимостью.
-     p Услуга дооснащения BMW как раз решает эту задачу. В нашем центре мы устанавливаем только оригинальные комплектующие БМВ, каждая запчасть имеет свой каталожный номер, и мы даем гарантию на все производимые работы и детали.
-     p По сути в комплекс дооснащения входят заводские опции, которые в штатной комплектации присутствуют на одних авто и отсутствуют в других. Поэтому все детали и проводка оригинальные, устанавливаются в штатные места, кабели питания ведутся в блок предохранителей, то есть все на "своих" местах. Заводская гарантия при этом сохраняется.
-     h3 Комплекс мер по дооснащению BMW включает в себя:
-     p 
-      strong Установка мультимедиа NBT, NBT Evo
-     ul 
-      li Камера заднего вида и круговой обзор (доступно не на все модели)
-      li Доводчики дверей
-      li Спортивные рули с подогревом и лепестками
-      li Цифровое телевидение и/или Apple TV
-      li Аудиосистемы Hi-Fi, Harman Kardon
-      li Щиток приборов: LED-панель, BlackPanel
-      li Установка мультимедийно-развлекательной системы для задних пассажиров
-      li Отдельно можно выделить комплекс кодирования и обновления. Обновление карт необходимо время от времени для навигации, обновление самой мультимедийной системы, а также обновление программного обеспечения всего автомобиля.
-     p Кодирование это активация опций, которые уже имеются на автомобиле. На каждом авто возможно закодировать различный набор опций, в зависимости, от аппаратных средств. Например, закрытие багажника с кнопки не обойдется одним кодированием, в случае, когда этой кнопки просто нет. По желанию можно кодировать одну или несколько опций. 
-     p 
-      strong Для каждого авто перечень будет разным, вот наиболее популярные:
-     ul 
-      li Разблокировка TV DVD в движении
-      li Активация воспроизведения видео с флешки
-      li Прослушка музыки по Bluetooth
-      li Отключение функции старт/стоп (запоминает последнее положение) 
-          
-    
-    +e.sidebar 
-
-     +b.A(href="assets/images/content/1.png" class="gallery-item" data-fancybox="gallery")
-      img(src="assets/images/content/1.png", alt="")
-
-     +b.A(href="assets/images/content/2.png" class="gallery-item" data-fancybox="gallery")
-      img(src="assets/images/content/2.png", alt="")
-     
-     +b.A(href="assets/images/content/3.png" class="gallery-item" data-fancybox="gallery")
-      img(src="assets/images/content/3.png", alt="")
-
-
- +b.SECTION.request
-  .container 
-   +e.block 
-    form
-     +e.block-row 
-      +e.block-col 
-       .row 
-
-        .col-12
-         +b.field 
-          label Ваше имя *
-          input(type="text" name="name" required)
-
-        .col-12
-         +b.field 
-          label Номер телефона *
-          input(type="text" name="phone" required).js-phone-mask
-        
-        .col-6
-         +b.field 
-          label Марка авто
-          input(type="text" name="brand")
-
-        .col-6
-         +b.field 
-          label Модель авто
-          input(type="text" name="model")
-
-       +b.BUTTON.btn(class="--primary --skew")
-        span Записаться на консультацию
 
 
 
-      +e.block-col 
-       +e.H4.title <span class="color-primary">Оставьте заявку</span> и в течении 1 часа получите бесплатную консультацию
-     
-     +b.form-advantages 
-      +e.row 
-       +e.col 
-        +b.form-advantage
-         +e.icon 
-          +icon('geo')
-         +e.name установочный центр
-         +e.text 
-          p г. Москва, ул. Вавилова, д. 13а
+ include ../includes/modules/_request
+ +request()
 
-       +e.col 
-        +b.form-advantage
-         +e.icon 
-          +icon('clock')
-         +e.name Часы работы
-         +e.text 
-          p Понедельник - пятница: 9:30-19:00
-          p Суббота: 10:00-16:00
-       +e.col 
-        +b.form-advantage
-         +e.icon 
-          +icon('whatsapp')
-         +e.name Контакты
-         +e.text 
-          p Бесплатный звонок: 8-916-832-53-54
-          p WhatsApp: +7 (495) 922-91-51
-
-       +e.col 
-        +b.form-advantage
-         +e.icon 
-          +icon('email')
-         +e.name Напишите нам
-         +e.text 
-          a(href="mailto:mail@novatune.ru") mail@novatune.ru
-
- +b.SECTION.works
-  .container 
-   +e.top 
-    +b.H3.title <span class="color-primary">РАБОТЫ ПО</span> BMW 530d
-    +b.swiper-nav 
-     +e.prev(ref="prev") 
-      +icon('arrow')
-     +e.next(ref="next")
-      +icon('arrow')
-
-   +e.swiper-container.swiper-container.js-swiper-works 
-    
-    +e.swiper-wrapper.swiper-wrapper 
-     +e.swiper-slide.swiper-slide
-      +b.A(href="https://dummyimage.com/400x300/000/fff" data-fancybox="works" class="work-item")
-       img(src="https://dummyimage.com/400x300/000/fff", alt="")
-     
-     +e.swiper-slide.swiper-slide
-      +b.A(href="https://dummyimage.com/400x300/000/fff" data-fancybox="works" class="work-item")
-       img(src="https://dummyimage.com/400x300/000/fff", alt="")
-     
-     +e.swiper-slide.swiper-slide
-      +b.A(href="https://dummyimage.com/400x300/000/fff" data-fancybox="works" class="work-item")
-       img(src="https://dummyimage.com/400x300/000/fff", alt="")
-     
-     +e.swiper-slide.swiper-slide
-      +b.A(href="https://dummyimage.com/400x300/000/fff" data-fancybox="works" class="work-item")
-       img(src="https://dummyimage.com/400x300/000/fff", alt="")
-
-   +e.bottom 
-    +b.A(href="#" class="btn --primary-line --skew __btn") 
-     span Смотреть все отзывы
-
- +b.SECTION 
-  .container 
-   +b.typography 
-    p Используйте новейшие информационные и развлекательные комплексы в автомобиле! Техцентр «NOVATUNE» предлагает установку полного спектра мультимедиа систем и дооснащение любых марок авто оригинальными опциями, не установленными производителем, с сохранением заводской гарантии.
-    p Используйте новейшие информационные и развлекательные комплексы в автомобиле! Техцентр «NOVATUNE» предлагает установку полного спектра мультимедиа систем и дооснащение любых марок авто оригинальными опциями, не установленными производителем, с сохранением заводской гарантии. Используйте новейшие информационные и развлекательные комплексы в автомобиле! Техцентр «NOVATUNE» предлагает установку полного спектра мультимедиа систем и дооснащение любых марок авто оригинальными опциями, не установленными производителем, с сохранением заводской гарантии.
-    p В штатной комплектации очень часто не хватает опций, которые значительно повышают комфорт во время эксплуатации автомобиля, а порой становятся просто необходимостью.
-    p Услуга дооснащения BMW как раз решает эту задачу. В нашем центре мы устанавливаем только оригинальные комплектующие БМВ, каждая запчасть имеет свой каталожный номер, и мы даем гарантию на все производимые работы и детали.По сути в комплекс дооснащения входят заводские опции, которые в штатной комплектации присутствуют на одних авто и отсутствуют в других. Поэтому все детали и проводка оригинальные, устанавливаются в штатные места, кабели питания ведутся в блок предохранителей, то есть все на "своих" местах. Заводская гарантия при этом сохраняется. В штатной комплектации очень часто не хватает опций, которые значительно повышают комфорт во время эксплуатации автомобиля, а порой становятся просто необходимостью.
-    p Услуга дооснащения BMW как раз решает эту задачу. В нашем центре мы устанавливаем только оригинальные комплектующие БМВ, каждая запчасть имеет свой каталожный номер, и мы даем гарантию на все производимые работы и детали.
-
+ include ../includes/modules/_works-reviews
+ 
 block script
   //-script(src="assets/js/vendors.js")
   script(src="assets/js/app.js")

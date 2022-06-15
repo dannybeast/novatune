@@ -1,0 +1,16 @@
+mixin top(title, bread)
+ +b.SECTION 
+   .container 
+
+     +b.page-top 
+       +e.col 
+         +b.H1.title(class="__title") !{title}
+       +e.col 
+         +b.breadcrumbs(class="__breadcrumbs")
+           a(href="index.html") Главная
+           +e.separator / 
+           span #{bread}
+
+     +b.typography
+       if block 
+        block

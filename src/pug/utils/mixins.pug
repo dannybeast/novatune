@@ -10,7 +10,23 @@ mixin icon(name)
     use(href=`assets/icons/sprite.svg#icon-${name}`)
 
 mixin services-item(obj)
- +b.A.services-item(href="service.html" style=`background-image:url('${obj.img}')`) 
+ +b.A.services-item(href="services-details.html") 
+  +e.inner-wrap
+   +e.bg(style=`background-image:url('${obj.img}')`)
+   +e.inner
+    +e.title=obj.title
+    if obj.price
+     +e.price <span>Цена:</span> #{obj.price}
+    +e.btn-wrap
+     +b.btn(class="--primary-gradient --skew") 
+      span Подробнее
+
+mixin reviews-item()
+ +b.A.reviews-item(href="review.html") 
+  +e.bg(style=`background-image:url('assets/images/reviews/1.png')`)
   +e.inner
-   +e.title=obj.title
-   +e.price <span>Цена:</span> #{obj.price}
+   +e.date 22/02/2022
+   +e.text Из салона сразу к нам. Установили Nbt evo, активация пробок RTTI, Bmw Online, Carplay, Mirrolink, кодирование скрытых опций
+   +e.tags 
+    +e.tag BMW 
+    +e.tag X2 F25

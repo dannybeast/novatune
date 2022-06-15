@@ -16,21 +16,27 @@ html(lang='ru')
 
     block head
 
-  body
+  body(class=bodyClass)
     
     main#app.wrapper
       // Main layout
       +b.main-layout
-        include ../includes/modules/_header
-        
+       +e.row
+        +e.bar 
+         +e.bar-inner
+          +e.hamburger
+           include ../includes/modules/_hamburger
+        +e.centered
+         include ../includes/modules/_header
+         
 
-        +e.ARTICLE.content
+         +e.ARTICLE.content
 
-          // Begin page
-          block content
-          // End page  
+           // Begin page
+           block content
+           // End page  
 
-        // Footer
-        include ../includes/modules/_footer
+       // Footer
+       include ../includes/modules/_footer
 
     block script

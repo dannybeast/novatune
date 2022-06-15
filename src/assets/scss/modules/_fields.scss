@@ -1,9 +1,9 @@
-$fieldHeight: rem(46);
+$fieldHeight: rem(55);
 
 // Field
 @mixin inputBase() {
    font-family: $main-font;
-   font-size: rem(18);
+   font-size: rem(16);
 
    position: relative;
 
@@ -16,9 +16,10 @@ $fieldHeight: rem(46);
    transition: background $animSpeed $anim;
    text-overflow: ellipsis;
 
-   border: 1px solid $border-base;
+   border: none;
    border-radius: rem(8);
-   background: $white-color;
+   background: transparent;
+
    &:focus,
    &:hover {
       outline: none !important;
@@ -28,13 +29,6 @@ $fieldHeight: rem(46);
       font-weight: 300;
 
       color: #ddd;
-   }
-   &:not(.field--error):hover {
-      border-color: darken($border-base, 15%);
-      background: rgba($white-color, 0.8);
-   }
-   &:not(.field--error).is-focus {
-      border-color: $primary-color;
    }
 }
 
@@ -53,19 +47,12 @@ $fieldHeight: rem(46);
 }
 
 .field-label {
-   font-size: rem(22px);
-   font-weight: 350;
+   font-size: rem(16px);
    line-height: 1.15;
 
    display: block;
 
-   letter-spacing: 0.03em;
-
    color: $black;
-
-@include sm-block() {
-      font-size: rem(18px);
-   }
 
    &.strong {
       font-weight: 500;
@@ -74,17 +61,56 @@ $fieldHeight: rem(46);
 
 .field {
    $parent: &;
-   .field-label {
-      margin-bottom: rem(15);
+   &__inner {
+      position: relative;
 
-@include sm-block() {
-         margin-bottom: rem(10);
+      transition: all 0.2s ease;
+      transform: skew(-10deg);
+
+      border-radius: rem(5);
+      background: #ccd1d7;
+      input,
+      select,
+      textarea {
+         font-weight: 600;
+
+         padding-top: rem(15);
+
+         transform: skew(10deg);
+      }
+      .field-label {
+         position: absolute;
+         top: rem(18);
+         left: rem(20);
+
+         transition: all 0.2s ease;
+         transform: skew(10deg);
+      }
+
+      &:focus,
+      &:hover {
+         background: lighten(#ccd1d7, 5%);
+         .field-label {
+            font-size: 12px;
+
+            top: rem(5);
+            left: rem(20);
+
+            color: $primary-color;
+         }
       }
    }
+
    input,
    select,
    textarea {
       @include inputBase();
+   }
+
+   &--light {
+      .field__inner {
+         background: #f1f1f1;
+      }
    }
 
    & >textarea {
@@ -116,11 +142,8 @@ $fieldHeight: rem(46);
 
       will-change: transform;
 
-      input,
-      select,
-      textarea {
-         border-color: $danger-color;
-         background: lighten($danger-color,40%);
+      .field__inner {
+         background: #fad1d1;
       }
       .field-label {
          color: $danger-color;

@@ -1,0 +1,67 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Контакты Novatune';
+    - var description = 'Контакты Novatune';
+    - var pageName = 'index';
+
+block content
+
+ include ../includes/modules/_top
+ +top('<span class="color-primary">Контакты</span><br> Novatune', 'Контакты ')
+  .text-contacts
+   p 
+    strong Двери мастерской открыты для посещения каждый день с 10:00 до 20:00, суббота c 10:00 до 16:00 - по предварительной записи. 
+    | <br>Каждый день мы радушно открываем двери центра, чтобы показать вам качество истинно европейского обслуживания и тюнинга автомобилей.
+   
+ +b.SECTION.contacts
+  .container 
+  
+   +e.row 
+    +e.col-map 
+     +e.map
+    +e.col-sidebar 
+    
+     +b.contact-item
+      +e.P.name Наш адрес:
+      +e.text 12124324, г. Москва, Можайское шоссе, вл.166 
+
+     +b.contact-item
+      +e.P.name Часы работы:
+      +e.text 
+       p ПН-ПТ с 10:00 - 20:00
+       p СБ-ВС выходндые дни
+
+     +b.contact-item
+      +e.P.name Телефон:
+      +e.A(href="tel:+74956464489").phone +7 (495) 646-44-89
+      +e.A(href="tel:+79623668844").phone +7 (962) 366 88 44
+ 
+
+     +b.contact-item
+      +e.P.name E-mail:
+      +e.A(href="mailto:info@novatune.ru").link info@novatune.ru
+     
+     +b.contact-item
+      +e.P.name Мы в соцсетях:
+      +b.UL.social 
+       +e.LI 
+        +e.A(href="#" target="_blank")
+         +icon('instagram')
+       +e.LI 
+        +e.A(href="#" target="_blank")
+         +icon('youtube')
+       +e.LI 
+        +e.A(href="#" target="_blank")
+         +icon('whatsapp')
+       +e.LI 
+        +e.A(href="#" target="_blank")
+         +icon('vk')
+       +e.LI 
+        +e.A(href="#" target="_blank")
+         +icon('telegram')
+
+
+block script
+  //-script(src="assets/js/vendors.js")
+  script(src="assets/js/app.js")

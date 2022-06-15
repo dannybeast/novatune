@@ -1,0 +1,105 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Услуги для BMW 530d';
+    - var description = 'Услуги для BMW 530d';
+    - var pageName = 'index';
+
+block content
+
+ include ../includes/modules/_top
+ +top('<span class="color-primary">Услуги</span><br> для BMW 530d', 'Услуги Novatune ')
+  p Используйте новейшие информационные и развлекательные комплексы в автомобиле! Техцентр «NOVATUNE» предлагает установку полного спектра мультимедиа систем и дооснащение любых марок авто оригинальными опциями, не установленными производителем, с сохранением заводской гарантии.
+  p Используйте новейшие информационные и развлекательные комплексы в автомобиле! Техцентр «NOVATUNE» предлагает установку полного спектра мультимедиа систем и дооснащение любых марок авто оригинальными опциями, не установленными производителем, с сохранением заводской гарантии. Используйте новейшие информационные и развлекательные комплексы в автомобиле! Техцентр «NOVATUNE» предлагает установку полного спектра мультимедиа систем и дооснащение любых марок авто оригинальными опциями, не установленными производителем, с сохранением заводской гарантии.
+
+ +b.SECTION.services
+  -
+   var services = [
+    {
+     title: 'Удаление вмятин без покраски',
+     img: 'assets/images/work/1.png'
+    },
+    {
+     title: 'Навигационно-мультимедийные системы для штатных мониторов',
+     img: 'assets/images/work/2.png'
+    },{
+     title: 'Расширенный CarPlay и Android Auto в любой авто',
+     img: 'assets/images/work/3.png'
+    },{
+     title: 'Автоматические доводчики дверей',
+     img: 'assets/images/work/4.png'
+    },{
+     title: 'Авто-ателье перетяжка и перешив салона, офис на колесах',
+     img: 'assets/images/work/5.png'
+    },{
+     title: 'Выдвижные пороги',
+     img: 'assets/images/work/6.png'
+    },{
+     title: 'Автосвет, подсветка, диоды, ambient light',
+     img: 'assets/images/work/7.png'
+    },{
+     title: 'Тонировка пленкой, атермальная и электро-тонировка',
+     img: 'assets/images/work/8.png'
+    },{
+     title: 'Установка комплексных систем защиты авто',
+     img: 'assets/images/work/9.png'
+    },{
+     title: 'Защита кузова и ЛКП полиуретановые и виниловые пленки полировка, покрытия',
+     img: 'assets/images/work/10.png'
+    },{
+     title: 'Порошковая покраска дисков, тормозных суппортов, насадок ',
+     img: 'assets/images/work/11.png'
+    },{
+     title: 'Ламинация карбоном, изготовление карбоновых деталей ',
+     img: 'assets/images/work/12.png'
+    },{
+     title: 'Мониторы для задних пассажиров ',
+     img: 'assets/images/work/13.png'
+    },{
+     title: 'Установка видео-регистраторов',
+     img: 'assets/images/work/14.png'
+    },{
+     title: 'Установка акустических систем',
+     img: 'assets/images/work/15.png'
+    },{
+     title: 'Установка кругового обзора и камер заднего вида',
+     img: 'assets/images/work/16.png'
+    },{
+     title: 'Внешний тюнинг, обвесы, карбон',
+     img: 'assets/images/work/17.png'
+    },{
+     title: 'Электропривод багажника',
+     img: 'assets/images/work/18.png'
+    },{
+     title: 'Шумоизоляция салона, аккустическая подготовка',
+     img: 'assets/images/work/19.png'
+    },{
+     title: 'Установка звездного неба',
+     img: 'assets/images/work/20.png'
+    },{
+     title: 'Офис на колесах Mercedes Benz V-class',
+     img: 'assets/images/work/21.png'
+    },{
+     title: 'Детейлинг услуги',
+     img: 'assets/images/work/22.png'
+    },
+   ]
+  .container 
+   +e.row 
+    each obj in services
+     +e.col 
+      +services-item(obj)
+
+
+ include ../includes/modules/_models
+
+ include ../includes/modules/_complex
+
+ include ../includes/modules/_request
+ +request(true)
+
+ include ../includes/modules/_works-reviews
+
+block script
+  //-script(src="assets/js/vendors.js")
+  script(src="assets/js/app.js")

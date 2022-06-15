@@ -1,0 +1,27 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Отзывы клиентов';
+    - var description = 'Отзывы клиентов';
+    - var pageName = 'index';
+
+block content
+ +b.SECTION
+  .container 
+   +b.page-top(class="--full")
+    +e.col 
+      +b.H1.title(class="__title") <span class="color-primary">Отзывы</span><br> клиентов NOVATUNE
+    +e.col 
+     +e.description 
+      p Из салона сразу к нам. Установили Nbt evo, активация пробок RTTI, Bmw Online, Carplay, Mirrolink, кодирование скрытых опций
+  
+     +e.tags 
+      +e.tag BMW 
+      +e.tag X2 F25
+
+
+ include ../includes/modules/_works-accordion
+
+block script
+  //-script(src="assets/js/vendors.js")
+  script(src="assets/js/app.js")

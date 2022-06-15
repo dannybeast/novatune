@@ -26,10 +26,6 @@
    justify-content: center;
    align-items: center;
 
-   &:hover {
-      color: #fff;
-      background: $primary-color;
-   }
 
    svg,
    img {
@@ -60,23 +56,62 @@
    &--primary-gradient {
       color: $white;
       background: linear-gradient(90deg, rgba(8,89,169,1) 0%, rgba(10,117,221,1) 100%);
+      span {
+         position: relative;
+         z-index: 2;
+      }
+      &:before {
+         position: absolute;
+         top: 0;
+         right: 0;
+         bottom: 0;
+         left: 0;
+
+         content: '';
+         transition: opacity 0.2s ease;
+
+         opacity: 0;
+         border-radius: inherit;
+         background: linear-gradient(90deg, lighten(rgba(8,89,169,1), 10%) 0%, lighten(rgba(10,117,221,1), 10%) 100%);
+      }
       &:hover {
-         background: linear-gradient(90deg, lighten(rgba(8,89,169,1), 5%) 0%, lighten(rgba(10,117,221,1), 5%) 100%);
-         box-shadow: 0 2px 8px rgba($primary-color, 0.3);
+         color: $white;
+         box-shadow: 0 2px 12px rgba($primary-color, 0.3);
+         &:before {
+            opacity: 1;
+         }
       }
    }
    &--primary-line {
       border: solid 1px $primary-color;
       background: transparent;
+      &:hover {
+         color: $white;
+         background: $primary-color;
+         box-shadow: 0 2px 12px rgba($primary-color, 0.3);
+      }
    }
 
+
+   &--skew {
+      transform: skew(-10deg);
+      span {
+         transform: skew(10deg);
+      }
+   }
+
+   &--large {
+      font-size: 15px;
+      font-weight: 900;
+
+      height: 52px;
+      padding: 0 rem(30);
+   }
 
 
 
    //
-   &:active {
-      transform: scale(0.98);
-   }
+
 
    &[disabled] {
       cursor: not-allowed;
@@ -86,34 +121,3 @@
    }
 }
 
-
-.btn-circle {
-   display: flex;
-
-   width: rem(44);
-   height: rem(44);
-
-   transition: background $anim 0.5s;
-
-   border-radius: rem(44);
-   background: $main-font-color;
-
-   align-items: center;
-   justify-content: center;
-   &:hover {
-      background: lighten($main-font-color, 25%);
-   }
-   svg {
-      width: 45%;
-      height: 45%;
-
-      fill: $white;
-   }
-
-   &--primary {
-      background: $primary-color;
-      &:hover {
-         background: lighten($primary-color, 10%);
-      }
-   }
-}

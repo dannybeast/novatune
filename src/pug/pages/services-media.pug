@@ -1,0 +1,66 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Мультимедиа для BMW 530d';
+    - var description = 'Мультимедиа для BMW 530d';
+    - var pageName = 'index';
+
+block content
+
+ include ../includes/modules/_top
+ +top('<span class="color-primary">Мультимедиа</span> для BMW 530d', 'Услуги Novatune ')
+  p Используйте новейшие информационные и развлекательные комплексы в автомобиле! Техцентр «NOVATUNE» предлагает установку полного спектра мультимедиа систем и дооснащение любых марок авто оригинальными опциями, не установленными производителем, с сохранением заводской гарантии.
+  p Используйте новейшие информационные и развлекательные комплексы в автомобиле! Техцентр «NOVATUNE» предлагает установку полного спектра мультимедиа систем и дооснащение любых марок авто оригинальными опциями, не установленными производителем, с сохранением заводской гарантии. Используйте новейшие информационные и развлекательные комплексы в автомобиле! Техцентр «NOVATUNE» предлагает установку полного спектра мультимедиа систем и дооснащение любых марок авто оригинальными опциями, не установленными производителем, с сохранением заводской гарантии.
+
+ +b.SECTION.services
+  -
+   var services = [
+    {
+     title: 'Камера заднего вида на BMW 530D',
+     price: 'по запросу',
+     img: 'assets/images/services/1.png'
+    },
+    {
+     title: 'Автозапуск: охранно-сервисная система BMW 530D',
+     price: 'по запросу',
+     img: 'assets/images/services/2.png'
+    },
+    {
+     title: 'Цифровое ТВ BMW 530D',
+     price: 'по запросу',
+     img: 'assets/images/services/3.png'
+    },
+    {
+     title: 'Видеорегистратор BMW Advanced Car Eye 2.0 BMW 530D',
+     price: 'по запросу',
+     img: 'assets/images/services/4.png'
+    },
+    {
+     title: 'Камеры кругового обзора на BMW 530D',
+     price: 'по запросу',
+     img: 'assets/images/services/5.png'
+    },
+    {
+     title: 'Система мультимедиа MGU и LED приборная панель BMW 530D',
+     price: 'по запросу',
+     img: 'assets/images/services/6.png'
+    }
+   ]
+  .container 
+   +e.row 
+    each obj in services
+     +e.col 
+      +services-item(obj)
+
+ include ../includes/modules/_content
+ 
+ include ../includes/modules/_request
+ +request()
+
+ include ../includes/modules/_works
+
+ include ../includes/modules/_text
+
+block script
+  //-script(src="assets/js/vendors.js")
+  script(src="assets/js/app.js")

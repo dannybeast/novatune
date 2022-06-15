@@ -1,0 +1,17 @@
++b.SECTION.complex
+  .container 
+   +e.block
+    +e.row 
+     +e.title <strong>Подберите комплекс</strong> дооснащения для вашего авто:
+     +e.FORM.form.js-validation-form
+      +b.field(class="--light")
+       +e.inner 
+         label.field-label Выберите марку *
+         input(type="text" name="brand" required)
+      +b.field(class="--light")
+       +e.inner 
+         label.field-label Выберите модель *
+         input(type="text" name="model" required)
+
+      +b.BUTTON.btn(class="--primary-gradient --skew --large")
+       span Подобрать

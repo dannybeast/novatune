@@ -1,0 +1,134 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Система мультимедиа MGU и LED приборная панель для BMW 5 серия G30 lci';
+    - var description = 'Система мультимедиа MGU и LED приборная панель для BMW 5 серия G30 lci';
+    - var pageName = 'index';
+
+block content
+
+ +b.SECTION 
+   .container 
+
+     +b.page-top(class="--full")
+       +e.col 
+         +b.H1.title(class="__title") Система мультимедиа MGU и LED приборная панель <span class="color-primary">для BMW 5 серия G30 lci</span>
+       +e.col 
+         +b.breadcrumbs(class="__breadcrumbs")
+           a(href="index.html") Главная
+           +e.separator / 
+           a(href="services-model.html") Услуги
+           +e.separator / 
+           span Система мультимедиа MGU и LED приборная панель для BMW 5 серия G30 lci
+
+ +b.SECTION.details
+ 
+  .container 
+   +e.row 
+    +e.col 
+     +e.gallery
+      .swiper-container.js-swiper-gallery-large
+        .swiper-wrapper
+          .swiper-slide 
+           +b.A(href="assets/images/content/4.png" data-fancybox="details").slide-large
+            img(src="assets/images/content/4.png", alt="")
+          .swiper-slide 
+           +b.A(href="https://dummyimage.com/638x637/ed996f/ed996f" data-fancybox="details").slide-large
+            img(src="https://dummyimage.com/638x637/ed996f/ed996f", alt="")
+          .swiper-slide 
+           +b.A(href="https://dummyimage.com/638x637/000/000" data-fancybox="details").slide-large
+            img(src="https://dummyimage.com/638x637/000/000", alt="")
+
+      +e.thrumbs
+        +e.prev(ref="prev") 
+         +icon('arrow')
+        
+        +e.next(ref="next")
+          +icon('arrow')
+        .swiper-container.js-swiper-gallery-small
+          
+          .swiper-wrapper
+            .swiper-slide 
+               +b.slide-small
+                img(src="assets/images/content/4.png", alt="")
+            .swiper-slide 
+               +b.slide-small
+                img(src="https://dummyimage.com/200x200/ed996f/ed996f", alt="")
+            .swiper-slide 
+               +b.slide-small
+                img(src="https://dummyimage.com/200x200/000/000", alt="")
+    +e.col
+     +e.content
+      +e.description 
+       p Система мультимедиа MGU id7 и LED приборная панель на BMW G-серии — оригинальная штатная навигация и LED приборная панель на модельный ряд BMW. MGU имеет новый дизайн меню, высокоскоростной интерфейс
+      
+      +e.separator 
+
+      +e.price 
+       span от
+       strong 156 800 р.
+      
+      +b.A(href="#" class="btn --primary-gradient --skew --large __btn") 
+         span Оформить заявку
+      
+      +e.separator 
+
+      +e.contacts-row 
+
+       +e.contacts-col 
+        +e.contacts-label Консультация по тел.:
+        +e.A(href="tel:+74956464489" class="contacts-phone") +7 (495) 646-44-89
+
+       +e.contacts-col 
+        +e.contacts-label Поделиться в соцсетях:
+        +b.UL.social 
+         +e.LI 
+          +e.A(href="#" target="_blank")
+           +icon('instagram')
+         +e.LI 
+          +e.A(href="#" target="_blank")
+           +icon('youtube')
+         +e.LI 
+          +e.A(href="#" target="_blank")
+           +icon('whatsapp')
+         +e.LI 
+          +e.A(href="#" target="_blank")
+           +icon('vk')
+         +e.LI 
+          +e.A(href="#" target="_blank")
+           +icon('telegram')
+      
+      +b.details-advantages 
+       +e.swiper-container.swiper-container.js-swiper-details-advantages 
+
+        +e.swiper-wrapper.swiper-wrapper 
+         +e.swiper-slide.swiper-slide
+          +b.details-advantage
+           +e.icon 
+            +icon('shield')
+           +e.text Автомобили клиентов находятся под охраной  и наблюдением 24a/7
+         +e.swiper-slide.swiper-slide
+          +b.details-advantage
+           +e.icon 
+            +icon('application')
+           +e.text квалифицированный персонал с опытом работы более 15 лет
+         +e.swiper-slide.swiper-slide
+          +b.details-advantage
+           +e.icon 
+            +icon('play')
+           +e.text Автомобили клиентов находятся под охраной  и наблюдением 24/7
+
+
+ include ../includes/modules/_content
+
+
+ include ../includes/modules/_request
+ +request()
+
+ include ../includes/modules/_works
+
+ include ../includes/modules/_text
+
+block script
+  //-script(src="assets/js/vendors.js")
+  script(src="assets/js/app.js")

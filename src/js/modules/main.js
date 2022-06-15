@@ -26,4 +26,30 @@ $(document).ready(function () {
   Select.init();
   Masks.maskPhone();
   App.currentYear()
+
+
+  
+var trigger = $('#hamburger'),
+isClosed = false;
+
+trigger.click(function () {
+burgerTime();
+});
+
+function burgerTime() {
+if (isClosed == true) {
+trigger.removeClass('is-open');
+trigger.addClass('is-closed');
+
+$('.header__navigation').toggleClass('is-open')
+isClosed = false;
+} else {
+trigger.removeClass('is-closed');
+trigger.addClass('is-open');
+$('.header__navigation').toggleClass('is-open')
+isClosed = true;
+}
+}
+//
+
 })

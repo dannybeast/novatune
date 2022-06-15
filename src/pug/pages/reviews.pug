@@ -1,0 +1,41 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Отзывы клиентов';
+    - var description = 'Отзывы клиентов';
+    - var pageName = 'index';
+
+block content
+
+ include ../includes/modules/_top
+ +top('<span class="color-primary">Отзывы</span><br> клиентов Novatune', 'Отзывы ')
+  p Используйте новейшие информационные и развлекательные комплексы в автомобиле! Техцентр «NOVATUNE» предлагает установку полного спектра мультимедиа систем и дооснащение любых марок авто оригинальными опциями, не установленными производителем, с сохранением заводской гарантии.
+
+
+ +b.SECTION.reviews
+  .container 
+   +e.row 
+    each el in [1,2,3,4,5,6,7,8,9,12,11,12]
+     +e.col 
+      +reviews-item(obj)
+   +e.pagination 
+    +b.pagination 
+     a(href="#").is-active 
+      span 1
+     a(href="#") 
+      span 2
+     a(href="#") 
+      span 3
+     a(href="#") 
+      span 4
+
+
+
+ include ../includes/modules/_request
+ +request(true)
+
+ include ../includes/modules/_text
+
+block script
+  //-script(src="assets/js/vendors.js")
+  script(src="assets/js/app.js")

@@ -1,0 +1,32 @@
++b.SECTION.works
+  .container 
+    +e.top 
+      +b.H3.title <span class="color-primary">Отзывы</span> наших клиентов
+      +b.swiper-nav 
+        +e.prev(ref="prev") 
+          +icon('arrow')
+        +e.next(ref="next")
+          +icon('arrow')
+
+    +e.swiper-container.swiper-container.js-swiper-works 
+      +e.swiper-wrapper.swiper-wrapper 
+
+        +e.swiper-slide.swiper-slide
+          +b.A(href="https://youtu.be/MzsJF91uooA" data-fancybox="works" class="work-item")
+            img(src="https://dummyimage.com/400x300/000/fff", alt="")
+
+        +e.swiper-slide.swiper-slide
+          +b.A(href="https://youtu.be/MzsJF91uooA" data-fancybox="works" class="work-item")
+            img(src="https://dummyimage.com/400x300/000/fff", alt="")
+
+        +e.swiper-slide.swiper-slide
+          +b.A(href="https://youtu.be/MzsJF91uooA" data-fancybox="works" class="work-item")
+            img(src="https://dummyimage.com/400x300/000/fff", alt="")
+
+        +e.swiper-slide.swiper-slide
+          +b.A(href="https://youtu.be/MzsJF91uooA" data-fancybox="works" class="work-item")
+            img(src="https://dummyimage.com/400x300/000/fff", alt="")
+
+    +e.bottom 
+      +b.A(href="reviews.html" class="btn --primary-line --skew --large __btn") 
+        span Смотреть все отзывы

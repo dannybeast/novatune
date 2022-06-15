@@ -1,0 +1,80 @@
+mixin request(hasDecor)
+ +b.SECTION.request
+   if hasDecor
+    +e.decor 
+     img(src="assets/images/bg/disk.png", alt="")
+   .container 
+
+     +e.block 
+
+       +e.block-row 
+         +e.block-col 
+           +e.FORM.form.js-validation-form
+             .row 
+
+               .col-12
+                 +b.field 
+                   +e.inner
+                     label.field-label Ваше имя *
+                     input(type="text" name="name" required)
+
+               .col-12
+                 +b.field
+                   +e.inner 
+                     label.field-label Номер телефона *
+                     input(type="text" name="phone" required).js-phone-mask
+
+               .col-6
+                 +b.field
+                   +e.inner 
+                     label.field-label Марка авто
+                     input(type="text" name="brand")
+
+               .col-6
+                 +b.field
+                   +e.inner 
+                     label.field-label Модель авто
+                     input(type="text" name="model")
+
+             +b.BUTTON.btn(class="--primary-gradient --skew --large")
+               span Записаться на консультацию
+
+
+
+         +e.block-col 
+           +e.H4.title <span class="color-primary">Оставьте заявку</span> и в течении 1 часа получите бесплатную консультацию
+
+       +b.form-advantages 
+         +e.row 
+           +e.col 
+             +b.form-advantage
+               +e.icon 
+                 +icon('geo')
+               +e.name установочный центр
+               +e.text 
+                 p г. Москва, ул. Вавилова, д. 13а
+
+           +e.col 
+             +b.form-advantage
+               +e.icon 
+                 +icon('clock')
+               +e.name Часы работы
+               +e.text 
+                 p Понедельник - пятница: 9:30-19:00
+                 p Суббота: 10:00-16:00
+           +e.col 
+             +b.form-advantage
+               +e.icon 
+                 +icon('whatsapp')
+               +e.name Контакты
+               +e.text 
+                 p Бесплатный звонок: 8-916-832-53-54
+                 p WhatsApp: +7 (495) 922-91-51
+
+           +e.col 
+             +b.form-advantage
+               +e.icon 
+                 +icon('email')
+               +e.name Напишите нам
+               +e.text 
+                 a(href="mailto:mail@novatune.ru") mail@novatune.ru
