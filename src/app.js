@@ -68,6 +68,26 @@ $('.js-cursor').addClass('is-zoom')
 $('.slide-large').mouseleave(function(){
 $('.js-cursor').removeClass('is-zoom')
 })
+
+
+
+//
+
+var  materialInputs = '.field__inner input';
+
+$(materialInputs).each(function(){
+  if ($(this).get(0).value && $(this).get(0).value.length)
+    $(this).parent().addClass('is-active');
+});
+
+$(document).on('focus', materialInputs, function(e) {
+  $(this).parent().addClass('is-active')
+});
+
+$(document).on('blur', materialInputs, function(e) {
+  if (!this.value.length)
+    $(this).parent().removeClass('is-active');
+});
 //
   $('body').addClass('is-loaded')
 })

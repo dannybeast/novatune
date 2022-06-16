@@ -2,7 +2,7 @@
    position: absolute;
    z-index: 9999;
 
-   transition: transform 0.1s $anim;
+   transition: transform 0.1s linear;
    pointer-events: none;
    &:after {
       content: '';
