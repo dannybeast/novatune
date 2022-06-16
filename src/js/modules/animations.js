@@ -27,20 +27,20 @@ export default function () {
 
   gsap.timeline({
    scrollTrigger:{
-       scrub: 2, trigger: ".request",
+       scrub: 2, trigger: ".request", scroller: '.main-layout'
    }
 }).fromTo('.request__decor',{y:0}, {y: -290, duration: 3})
 
 gsap.timeline({
  scrollTrigger:{
-     scrub: 2, trigger: ".request",
+     scrub: 2, trigger: ".request", scroller: '.main-layout'
  }
 }).fromTo('.request__wheel',{y:0}, {y: 290, duration: 3})
 
 gsap.timeline({
  scrollTrigger:{
      scrub: 2, 
-     trigger: ".setup-center",
+     trigger: ".setup-center", scroller: '.main-layout'
  }
 })
 .fromTo('#_x34_4-love_xA0_Изображение',{scale:0.7}, {transformOrigin: 'center',

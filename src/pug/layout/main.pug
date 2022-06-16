@@ -17,100 +17,126 @@ html(lang='ru')
     block head
 
   body(class=bodyClass)
-    
+
     main#app.wrapper
+      
       // Main layout
       +b.main-layout
-       +e.row
-        +e.bar 
-         +e.bar-inner
-          +e.hamburger
-           include ../includes/modules/_hamburger
-        +e.centered
-         include ../includes/modules/_header
-         
-
-         +e.ARTICLE.content
-
-           // Begin page
-           block content
-           // End page  
-
-       // Footer
-       include ../includes/modules/_footer
+        +e.row
+          +e.bar 
+            +e.bar-inner
+              +e.hamburger
+                include ../includes/modules/_hamburger
+          +e.centered
+            .container
+             include ../includes/modules/_header
 
 
-       // Заказать звонок
-       +b.modal(class="--primary")#callMe
-        +e.title Обратный звонок
-        +e.FORM.form.js-validation-form
-         .row 
+            +e.ARTICLE.content
 
-           .col-12
-             +b.field(class="--white-light")
-               +e.inner
-                 
-                 input(type="text" name="name" required)
-                 label.field-label Ваше имя *
+              // Begin page
+              block content
+              // End page  
 
-           .col-12
-             +b.field(class="--white-light")
-               +e.inner 
-                 
-                 input(type="text" name="phone" required).js-phone-mask
-                 label.field-label Номер телефона *
+        // Footer
+        include ../includes/modules/_footer
 
-           .col-6
-             +b.field(class="--white-light")
-               +e.inner 
-                
-                 input(type="text" name="brand")
-                 label.field-label Марка авто
 
-           .col-6
-             +b.field(class="--white-light")
-               +e.inner 
-                 
-                 input(type="text" name="model")
-                 label.field-label Модель авто
-           .col-12
-             +b.field(class="--white-light")
-               +e.inner
-                 
-                 input(type="text" name="comment")
-                 label.field-label Комментарий
-         +e.buttons
-          +b.BUTTON.btn(class="--white --skew --large")
-            span Заказать звонок
+        // Заказать звонок
+        +b.modal(class="--primary")#callMe
+          +e.title Обратный звонок
+          +e.FORM.form.js-validation-form
+            .row 
 
-       // Заказать услугу
-       +b.modal(class="--primary")#orderService
-        +e.title Заказать камеру заднего вида на BMW X3 F25
-        +e.FORM.form.js-validation-form
-         .row 
+              .col-12
+                +b.field(class="--white-light")
+                  +e.inner
 
-           .col-12
-             +b.field(class="--white-light")
-               +e.inner
-                 
-                 input(type="text" name="name" required)
-                 label.field-label Ваше имя *
+                    input(type="text" name="name" required)
+                    label.field-label Ваше имя *
 
-           .col-12
-             +b.field(class="--white-light")
-               +e.inner 
-                 
-                 input(type="text" name="phone" required).js-phone-mask
-                 label.field-label Номер телефона *
-           .col-12
-             +b.field(class="--white-light")
-               +e.inner
-                 
-                 input(type="text" name="email")
-                 label.field-label Ваш email:
+              .col-12
+                +b.field(class="--white-light")
+                  +e.inner 
 
-     
-         +e.buttons
-          +b.BUTTON.btn(class="--white --skew --large")
-            span Отправить
+                    input(type="text" name="phone" required).js-phone-mask
+                    label.field-label Номер телефона *
+
+              .col-6
+                +b.field(class="--white-light")
+                  +e.inner 
+
+                    input(type="text" name="brand")
+                    label.field-label Марка авто
+
+              .col-6
+                +b.field(class="--white-light")
+                  +e.inner 
+
+                    input(type="text" name="model")
+                    label.field-label Модель авто
+              .col-12
+                +b.field(class="--white-light")
+                  +e.inner
+
+                    input(type="text" name="comment")
+                    label.field-label Комментарий
+            +e.buttons
+              +b.BUTTON.btn(class="--white --skew --large")
+                span Заказать звонок
+
+        // Заказать услугу
+        +b.modal(class="--primary")#orderService
+          +e.title Заказать камеру заднего вида на BMW X3 F25
+          +e.FORM.form.js-validation-form
+            .row 
+
+              .col-12
+                +b.field(class="--white-light")
+                  +e.inner
+
+                    input(type="text" name="name" required)
+                    label.field-label Ваше имя *
+
+              .col-12
+                +b.field(class="--white-light")
+                  +e.inner 
+
+                    input(type="text" name="phone" required).js-phone-mask
+                    label.field-label Номер телефона *
+              .col-12
+                +b.field(class="--white-light")
+                  +e.inner
+
+                    input(type="text" name="email")
+                    label.field-label Ваш email:
+
+
+            +e.buttons
+              +b.BUTTON.btn(class="--white --skew --large")
+                span Отправить
+      // Mega menu
+      +b.mega-menu 
+       .container
+         +e.top
+           include ../includes/modules/_header
+         +e.center
+           +e.NAV.nav 
+             ul
+               li(class=( pageName === "home" ? " is-active" : undefined))
+                 a(href="index.html") Главная
+               li(class=( pageName === "about" ? " is-active" : undefined))
+                 a(href="about.html") О нас
+               li(class=( pageName === "roadmap" ? " is-active" : undefined))
+                 a(href="roadmap.html") Дорожная карта
+               li(class=( pageName === "investors" ? " is-active" : undefined))
+                 a(href="investors.html") Инвесторам
+               li(class=( pageName === "new" ? " is-active" : undefined))
+                 a(href="new.html") Партнерам
+               li(class=( pageName === "bounty" ? " is-active" : undefined))
+                 a(href="bounty.html") Баунти
+               li(class=( pageName === "faq" ? " is-active" : undefined))
+                 a(href="faq.html") FAQ
+               li(class=( pageName === "contacts" ? " is-active" : undefined))
+                 a(href="contacts.html") Контакты
     block script

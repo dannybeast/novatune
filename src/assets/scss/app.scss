@@ -78,6 +78,112 @@
    }
 }
 
+.mega-menu {
+   position: fixed;
+   z-index: 20;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: rem(100);
+
+   overflow: hidden;
+
+   padding: 0 10vw;
+
+   color: #000;
+   background: url('../images/bg/bg-home.png') top right no-repeat, url('../images/bg/bg2.png') top 100vh left no-repeat;
+   background-color: #fff;
+   background-size: 100%;
+
+@include to(1290px) {
+      display: none;
+   }
+
+   &__top {
+      border-bottom: 1px solid $primary-color;
+
+      justify-content: space-between;
+      align-items: center;
+      flex-shrink: 0;
+   }
+
+   &__center {
+      display: flex;
+      flex-direction: column;
+
+      flex-grow: 1;
+      justify-content: center;
+   }
+
+   &__right {
+      display: flex;
+
+      align-items: center;
+      & >* {
+         margin: 0 0 0 30px;
+      }
+   }
+
+   &__bottom {
+      padding: 40px 0;
+
+      border-top: 1px solid #d7d7d7;
+   }
+   .social {
+      li {
+         margin: 0 20px 10px 0;
+      }
+   }
+   .button {
+      font-size: rem(17px);
+
+      height: rem(43px);
+   }
+   .container {
+      position: initial;
+
+      display: flex;
+      flex-direction: column;
+
+      min-height: 100%;
+   }
+
+   &__nav {
+      columns: 2;
+      li {
+         margin-bottom: rem(60px);
+
+@include notebook-block() {
+            margin-bottom: rem(50px);
+         }
+
+         &:last-child {
+            margin-bottom: 0;
+         }
+         &.is-active {
+            a {
+               color: $accent-color;
+            }
+         }
+      }
+      a {
+         font-size: rem(33px);
+         font-weight: 300;
+
+         text-decoration: none;
+
+         color: #000;
+
+@include notebook-block() {
+            font-size: rem(28px);
+         }
+
+         &:hover {
+            color: $primary-color;
+         }
+      }
+   }
+}
 .details {
    $space: rem(60px);
 
@@ -1248,6 +1354,13 @@
 
          border-radius: rem(10);
          background: linear-gradient(180deg, #0855a0 0%, #67a1db 100%);
+      }
+      .btn {
+         &:hover {
+            color: $primary-color;
+            background: $white;
+            ;
+         }
       }
    }
    &__title {

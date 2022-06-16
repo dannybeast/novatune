@@ -12,26 +12,6 @@ var youtubeThumbnail = require('youtube-thumbnail');
 import "./assets/scss/app.scss";
 
 $(document).ready(function () {
-
-
-  $('.js-youtube-video').each(function(){
-   var thumbnail = youtubeThumbnail( $(this).attr('href') );
-   $(this).find('img').attr('src', thumbnail.high.url)
-  })
-
-  $('.gallery-item').mouseenter(function(){
-   $('.js-cursor').addClass('is-zoom')
-  })
-  $('.gallery-item').mouseleave(function(){
-    $('.js-cursor').removeClass('is-zoom')
-  })
-$('.slide-large').mouseenter(function(){
- $('.js-cursor').addClass('is-zoom')
-})
-$('.slide-large').mouseleave(function(){
-  $('.js-cursor').removeClass('is-zoom')
-})
-
  var large = new Swiper(".js-swiper-gallery-large", {
   loop: true,
   loopedSlides: 3,
@@ -71,6 +51,23 @@ sliderMainIntro.init();
   $("html, body").animate({ scrollTop: $(scrollTarget).position().top - 50 }, 500);
 });
 contactsMap();
+$('.js-youtube-video').each(function(){
+ var thumbnail = youtubeThumbnail( $(this).attr('href') );
+ $(this).find('img').attr('src', thumbnail.high.url)
+})
+
+$('.gallery-item').mouseenter(function(){
+ $('.js-cursor').addClass('is-zoom')
+})
+$('.gallery-item').mouseleave(function(){
+  $('.js-cursor').removeClass('is-zoom')
+})
+$('.slide-large').mouseenter(function(){
+$('.js-cursor').addClass('is-zoom')
+})
+$('.slide-large').mouseleave(function(){
+$('.js-cursor').removeClass('is-zoom')
+})
 //
   $('body').addClass('is-loaded')
 })
