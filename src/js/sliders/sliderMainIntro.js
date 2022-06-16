@@ -2,7 +2,7 @@ import Swiper from "swiper/swiper-bundle";
 
 class sliderMainIntro {
   constructor(){
-    this.el = ".js-main-intro-swiper",
+    this.el = ".js-swiper-intro",
     this.options = {
       loop: false,
       slidesPerView: 1, 
@@ -22,8 +22,8 @@ class sliderMainIntro {
   init(){
     let that = this;
     this.options.navigation = {
-      prevEl: `${this.el} [ref="prev"]`,
-      nextEl: `${this.el} [ref="next"]`,
+      prevEl: `.main-intro [ref="prev"]`,
+      nextEl: `.main-intro [ref="next"]`,
     }
     let swiper = new Swiper(`${this.el}`, this.options)
 

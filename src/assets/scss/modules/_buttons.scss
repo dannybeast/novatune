@@ -44,7 +44,15 @@
    }
 
    // Colors
-
+   &--white {
+      background: $white;
+   }
+   &--black {
+      color: $white;
+      background: $black; &:hover {
+         color: $white;
+      }
+   }
    &--primary {
       color: $white;
       background: $primary-color;

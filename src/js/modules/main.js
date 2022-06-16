@@ -15,9 +15,11 @@ window.Masks = Masks // Global masks
 window.JQuery = $
 import animations from "./animations";
 import Textarea from "./textarea";
+import cursor from "./cursor";
 
 
 $(document).ready(function () {
+ cursor();
   validation();
   animations();
   tabs();

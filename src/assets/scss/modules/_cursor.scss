@@ -1,0 +1,53 @@
+.js-cursor {
+   position: absolute;
+   z-index: 9999;
+
+   transition: transform 0.1s $anim;
+   pointer-events: none;
+   &:after {
+      content: '';
+      transition: transform 0.5s $anim;
+      transform: scale(0);
+      pointer-events: none;
+
+      will-change: transform;
+   }
+   &.is-cross {
+      &:after {
+         display: block;
+
+         width: 48px;
+         height: 48px;
+         margin-top: -24px;
+         margin-left: -24px;
+
+         transform: scale(1);
+
+         background: svg-load('../icons/cross-circle.svg', stroke=$white);
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: contain;
+      }
+   }
+
+   &.is-zoom {
+      &:after {
+         display: block;
+
+         width: rem(80);
+         height: rem(80);
+         margin-top: rem(-40);
+         margin-left: rem(-40);
+
+         transform: scale(1);
+
+         color: $white;
+         border-radius: 50%;
+         background: svg-load('../icons/zoom2.svg', fill=$white);
+         background-color: $primary-color;
+         background-repeat: no-repeat;
+         background-position: center;
+         background-size: 50%;
+      }
+   }
+}

@@ -1,8 +1,11 @@
-mixin request(hasDecor)
+mixin request(hasDecor, hasWheel)
  +b.SECTION.request
    if hasDecor
     +e.decor 
      img(src="assets/images/bg/disk.png", alt="")
+   if hasWheel
+    +e.wheel 
+     img(src="assets/images/bg/wheel.png", alt="")
    .container 
 
      +e.block 
@@ -15,26 +18,30 @@ mixin request(hasDecor)
                .col-12
                  +b.field 
                    +e.inner
-                     label.field-label Ваше имя *
+                     
                      input(type="text" name="name" required)
+                     label.field-label Ваше имя *
 
                .col-12
                  +b.field
                    +e.inner 
-                     label.field-label Номер телефона *
+                     
                      input(type="text" name="phone" required).js-phone-mask
+                     label.field-label Номер телефона *
 
                .col-6
                  +b.field
                    +e.inner 
-                     label.field-label Марка авто
+                     
                      input(type="text" name="brand")
+                     label.field-label Марка авто
 
                .col-6
                  +b.field
                    +e.inner 
-                     label.field-label Модель авто
+                     
                      input(type="text" name="model")
+                     label.field-label Модель авто
 
              +b.BUTTON.btn(class="--primary-gradient --skew --large")
                span Записаться на консультацию

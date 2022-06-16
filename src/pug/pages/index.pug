@@ -9,13 +9,68 @@ block variables
 block content
 
  +b.SECTION.main-intro
-  .container 
 
+   +e.swiper-container.swiper-container.js-swiper-intro 
+
+    +e.swiper-wrapper.swiper-wrapper 
+     
+     // Slide
+     +e.swiper-slide.swiper-slide
+       +b.main-slide 
+        .container 
+         +e.row 
+          +e.content(data-swiper-parallax="-200")
+           +e.H2.title Придайте индивидуальности своему автомобилю <span class="color-primary">в novatune</span>
+           +e.description 
+            p С гарантией качества на срок владения автомобилем. Опыт работы более 15 лет.
+          +e.media 
+           img(src="assets/images/main-intro/car.png", alt="" data-swiper-parallax="-300")
+
+     // Slide
+     +e.swiper-slide.swiper-slide
+       +b.main-slide 
+        .container 
+         +e.row 
+          +e.content(data-swiper-parallax="-200")
+           +e.H2.title Придайте индивидуальности своему автомобилю <span class="color-primary">в novatune</span>
+           +e.description 
+            p С гарантией качества на срок владения автомобилем. Опыт работы более 15 лет.
+          +e.media 
+           img(src="assets/images/main-intro/car.png", alt="" data-swiper-parallax="-300")
+    
+    .container 
+     +b.swiper-nav 
+      +e.prev(ref="prev") 
+        +icon('arrow')
+      +e.next(ref="next")
+        +icon('arrow')
 
  +b.SECTION.why
   .container 
+   +e.H3.title 
+    span Почему мы?
+   +e.row 
+    +e.col 
+     +b.why-item 
+      +e.P.title Гарантия сохранности Вашего автомобиля в нашем техцентре
+      +e.description 
+       p Автомобили клиентов находятся под охраной  и наблюдением 24/7
+      +e.icon 
+       +icon('shield')
 
-
+    +e.col 
+     +b.why-item 
+      +e.P.title Квалифицированный персонал с опытом работы более 15 лет
+      +e.description 
+       p Мы трепетно относимся к Вашему автомобилю
+      +e.icon 
+       +icon('application')
+    +e.col
+     +b.why-item(class="--primary")
+      +e.P.title Точный Онлайн расчет стоимости дооснащения для вашего авто
+      +e.bottom 
+       +b.A(href="#" class="btn --black --skew --large __btn") 
+        span Расчитать стоимость
 
  include ../includes/modules/_models
 
@@ -56,7 +111,7 @@ block content
      +b.H3.title Услуги <br>novatune
      +e.desc С гарантией качества на срок владения автомобилем.
 
-     +b.A(href="#" class="btn --primary-line --skew --large __btn") 
+     +b.A(href="services-media.html" class="btn --primary-line --skew --large __btn") 
        span Перейти в каталог
 
     each obj in services
@@ -67,11 +122,55 @@ block content
 
  +b.SECTION.setup-center 
   .container 
+   +b.H3.title <span class="color-primary">Наш удобный</span> установочный центр
+   +e.svg-wrap
+    svg(version='1.1' id='Группа_47_00000075867144545469965440000008781047435793621652_' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0' y='0' viewBox='0 0 1371 602' style='enable-background:new 0 0 1371 602' xml:space='preserve')
+     g(id='_x34_4-love_xA0_Изображение_00000176746267456227263850000006421516870342724499_')
+       image(style='overflow:visible' width='1371' height='567' id='_x34_4-love_xA0_Изображение' xlink:href='assets/images/setup-center/CE1B49B6.png' transform='translate(0 35)')
+     path.st0(d='M274.5 234.25c-6.21 0-11.25 5.04-11.25 11.25s5.04 11.25 11.25 11.25 11.25-5.04 11.25-11.25-5.04-11.25-11.25-11.25z' id='Эллипс_1_копия_3')
+     path(d='M274.56 238.75c-3.62 0-6.56 2.94-6.56 6.56 0 3.62 2.94 6.56 6.56 6.56 3.62 0 6.56-2.94 6.56-6.56 0-3.62-2.93-6.56-6.56-6.56z' style='fill:#98121f' id='Эллипс_1_копия_6')
+     g(id='Слой_154_xA0_Изображение_00000011720528265494945420000000308106940618921882_')
+       image(style='overflow:visible' width='294' height='124' id='Слой_154_xA0_Изображение' xlink:href='assets/images/setup-center/CE1B49BA.png' transform='translate(127 106)')
+     path(d='M835.74 196.39H705.26c-3.54 0-6.4 2.83-6.4 6.31l-32.02 128.57c0 3.49 2.87 6.31 6.4 6.31h130.48c3.54 0 6.4-2.83 6.4-6.31l32.02-128.57c.01-3.48-2.86-6.31-6.4-6.31z' style='fill:#1f1f1f' id='Прямоугольник_11')
+     g(id='Прямоугольник_11_копия_4_xA0_Изображение_00000004506986576325934460000004728275362318739109_')
+       image(style='overflow:visible' width='120' height='97' id='Прямоугольник_11_копия_4_xA0_Изображение' xlink:href='assets/images/setup-center/CE1B49BD.png' transform='translate(897 353)')
+     g.st3(id='Прямоугольник_11_копия_5__x2B__Слой_165_00000074401368564525004650000015166835735933459120_')
+       defs
+         path#SVGID_1_.st3(d='M1131.13 454.06H998.25c-3.6 0-6.52 2.88-6.52 6.43l-32.61 130.94c0 3.55 2.92 6.43 6.52 6.43h132.88c3.6 0 6.52-2.88 6.52-6.43l32.61-130.94c0-3.55-2.92-6.43-6.52-6.43z')
+       clippath#SVGID_00000121984835914853077520000005937437405462363570_
+         use(xlink:href='#SVGID_1_' style='overflow:visible')
+       g(style='clip-path:url(#SVGID_00000121984835914853077520000005937437405462363570_)')
+         image(style='overflow:visible' width='179' height='144' id='Прямоугольник_11_копия_5__x2B__Слой_165_xA0_Изображение' xlink:href='assets/images/setup-center/CE1B49BE.png' transform='translate(959 454)')
+     g(id='Прямоугольник_11_копия_3_xA0_Изображение_00000129188568908812615020000014669222514156322960_')
+       image(style='overflow:visible' width='217' height='175' id='Прямоугольник_11_копия_3_xA0_Изображение' xlink:href='assets/images/setup-center/CE1B49BC.png' transform='translate(456 254)')
+     g(id='Прямоугольник_11_копия_6_xA0_Изображение_00000056393535187058475080000000222546335999611574_')
+       image(style='overflow:visible' width='93' height='75' id='Прямоугольник_11_копия_6_xA0_Изображение' xlink:href='assets/images/setup-center/CE1B49BB.png' transform='translate(354 428)')
+     g.st3(id='Прямоугольник_11_копия__x2B__Слой_164_00000000913358152363234940000012245732822077225908_')
+       defs
+         path#SVGID_00000000189786749565355170000002710727616629012133_.st3(d='M892.06 353.79H671.87c-5.97 0-10.81 4.84-10.81 10.81l-54.03 220.18c0 5.97 4.84 10.81 10.81 10.81h220.18c5.97 0 10.81-4.84 10.81-10.81l54.03-220.18c0-5.97-4.84-10.81-10.8-10.81z')
+       clippath#SVGID_00000031167461799171476300000006153844974234897070_
+         use(xlink:href='#SVGID_00000000189786749565355170000002710727616629012133_' style='overflow:visible')
+       g(style='clip-path:url(#SVGID_00000031167461799171476300000006153844974234897070_)')
+         image(style='overflow:visible' width='296' height='243' id='Прямоугольник_11_копия__x2B__Слой_164_xA0_Изображение' xlink:href='assets/images/setup-center/CE1B49B5.png' transform='translate(607 353)')
+     g.st3(id='Прямоугольник_11_копия_2__x2B__Слой_163_00000161606348572906896520000017513905869245447074_')
+       defs
+         path#SVGID_00000172442567889862938330000005107689595115660198_.st3(d='M1300.47.33H993.36c-8.32 0-15.07 6.75-15.07 15.07l-75.36 307.11c0 8.32 6.75 15.07 15.07 15.07h307.11c8.32 0 15.07-6.75 15.07-15.07l75.36-307.11c0-8.32-6.74-15.07-15.07-15.07z')
+       clippath#SVGID_00000170270628180175201700000012664314036085716628_
+         use(xlink:href='#SVGID_00000172442567889862938330000005107689595115660198_' style='overflow:visible')
+       g(style='clip-path:url(#SVGID_00000170270628180175201700000012664314036085716628_)')
+         image(style='overflow:visible' width='414' height='338' id='Прямоугольник_11_копия_2__x2B__Слой_163_xA0_Изображение' xlink:href='assets/images/setup-center/CE1B49B7.png' transform='translate(902)')
+     text(transform='translate(231.864 139.53)' style="font-size:20px" id='Москва').address-city Москва
+     g(id='Можайское_шоссе_вл.166___x2B_7_x28_495_x29_646-44-89_00000114791368897226024320000012215570939953230760_')
+       text(id='Можайское_шоссе_вл.166___x2B_7_x28_495_x29_646-44-89' transform='translate(175.733 171.53)')
+         tspan.st0.st6.st7.address-svg(x='0' y='0') Можайское шоссе вл.166 
+         tspan.st0.st6.st7(x='40.48' y='27') +7(495)646-44-89
 
-
+   +e.bottom 
+    +b.A(href="#" class="btn --primary-gradient --skew --large __btn" data-src="#callMe" data-fancybox="dialog") 
+        span Записаться на визит в установочный центр
 
  include ../includes/modules/_request
- +request()
+ +request('', true)
 
  include ../includes/modules/_works-reviews
  

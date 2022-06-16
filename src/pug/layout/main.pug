@@ -39,4 +39,78 @@ html(lang='ru')
        // Footer
        include ../includes/modules/_footer
 
+
+       // Заказать звонок
+       +b.modal(class="--primary")#callMe
+        +e.title Обратный звонок
+        +e.FORM.form.js-validation-form
+         .row 
+
+           .col-12
+             +b.field(class="--white-light")
+               +e.inner
+                 
+                 input(type="text" name="name" required)
+                 label.field-label Ваше имя *
+
+           .col-12
+             +b.field(class="--white-light")
+               +e.inner 
+                 
+                 input(type="text" name="phone" required).js-phone-mask
+                 label.field-label Номер телефона *
+
+           .col-6
+             +b.field(class="--white-light")
+               +e.inner 
+                
+                 input(type="text" name="brand")
+                 label.field-label Марка авто
+
+           .col-6
+             +b.field(class="--white-light")
+               +e.inner 
+                 
+                 input(type="text" name="model")
+                 label.field-label Модель авто
+           .col-12
+             +b.field(class="--white-light")
+               +e.inner
+                 
+                 input(type="text" name="comment")
+                 label.field-label Комментарий
+         +e.buttons
+          +b.BUTTON.btn(class="--white --skew --large")
+            span Заказать звонок
+
+       // Заказать услугу
+       +b.modal(class="--primary")#orderService
+        +e.title Заказать камеру заднего вида на BMW X3 F25
+        +e.FORM.form.js-validation-form
+         .row 
+
+           .col-12
+             +b.field(class="--white-light")
+               +e.inner
+                 
+                 input(type="text" name="name" required)
+                 label.field-label Ваше имя *
+
+           .col-12
+             +b.field(class="--white-light")
+               +e.inner 
+                 
+                 input(type="text" name="phone" required).js-phone-mask
+                 label.field-label Номер телефона *
+           .col-12
+             +b.field(class="--white-light")
+               +e.inner
+                 
+                 input(type="text" name="email")
+                 label.field-label Ваш email:
+
+     
+         +e.buttons
+          +b.BUTTON.btn(class="--white --skew --large")
+            span Отправить
     block script

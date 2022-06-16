@@ -1,17 +1,17 @@
 .main-layout {
    display: flex;
+   overflow: hidden;
+   overflow-y: auto;
    flex-direction: column;
 
-   min-height: 100vh;
+   height: 100vh;
 
-   background: url('../images/bg/bg.png') top right -15% no-repeat, url('../images/bg/bg2.png') top 100vh left no-repeat;
 
-@include lg-block() {
-      overflow: hidden;
-   }
 
    &__row {
       display: flex;
+
+      background: url('../images/bg/bg.png') top right -15% no-repeat, url('../images/bg/bg2.png') top 100vh left no-repeat;
 
       flex-grow: 1;
    }
@@ -52,6 +52,8 @@
       }
    }
    &__centered {
+      overflow: hidden;
+
       width: 100%;
       padding-bottom: rem(30);
    }
@@ -85,7 +87,7 @@
 }
 
 .is-page-index {
-   .main-layout {
-      background: url('../images/bg/bg2.png') top 100vh left no-repeat;
+   .main-layout__row {
+      background: url('../images/bg/bg-home.png') top right no-repeat, url('../images/bg/bg2.png') top 100vh left no-repeat;
    }
 }

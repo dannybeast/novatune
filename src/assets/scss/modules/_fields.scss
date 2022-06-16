@@ -61,6 +61,11 @@ $fieldHeight: rem(55);
 
 .field {
    $parent: &;
+   input,
+   select,
+   textarea {
+      @include inputBase();
+   }
    &__inner {
       position: relative;
 
@@ -74,23 +79,14 @@ $fieldHeight: rem(55);
       textarea {
          font-weight: 600;
 
+         overflow: hidden;
+
          padding-top: rem(15);
 
          transform: skew(10deg);
-      }
-      .field-label {
-         position: absolute;
-         top: rem(18);
-         left: rem(20);
 
-         transition: all 0.2s ease;
-         transform: skew(10deg);
-      }
-
-      &:focus,
-      &:hover {
-         background: lighten(#ccd1d7, 5%);
-         .field-label {
+         &:focus ~label.field-label,
+         &:valid ~label.field-label {
             font-size: 12px;
 
             top: rem(5);
@@ -99,13 +95,23 @@ $fieldHeight: rem(55);
             color: $primary-color;
          }
       }
+      .field-label {
+         position: absolute;
+         top: rem(18);
+         left: rem(20);
+
+         transition: all 0.2s ease;
+         transform: skew(10deg);
+         pointer-events: none;
+      }
+
+      &:focus,
+      &:hover {
+         background: lighten(#ccd1d7, 5%);
+      }
    }
 
-   input,
-   select,
-   textarea {
-      @include inputBase();
-   }
+
 
    &--light {
       .field__inner {
@@ -113,17 +119,25 @@ $fieldHeight: rem(55);
       }
    }
 
-   & >textarea {
+   &--white-light {
+      .field__inner {
+         background: rgba(#fff, 0.3);
+         input,
+         select,
+         textarea,
+         .field-label {
+            color: #fff;
+         }
+      }
+   }
+
+   textarea {
       overflow: hidden;
 
-      min-height: rem(220);
-      padding-top: 10px;
+      min-height: $fieldHeight;
+      margin-top: rem(15);
 
       resize: vertical;
-
-@include sm-block() {
-         min-height: rem(150);
-      }
    }
 
 
