@@ -45,11 +45,11 @@ $(document).ready(function () {
  var open = false;
 
  TweenMax.set(menu, {
-  x: '120%'
+  y: '-120%'
  });
 
  TweenMax.set(menu.find('.mega-menu__row'), {
-  x: '30%'
+  y: '0%'
  });
 
  TweenMax.set(menu.find('.mega-menu__top, .mega-menu__right'), {
@@ -63,10 +63,10 @@ $(document).ready(function () {
  });
 
  timeline
-  .to(menu, 0.6, {
-   x: '0%'
+  .to(menu, 0.4, {
+   y: '0%'
   }).to(menu.find('.mega-menu__row'), 0.5, {
-   x: '0%',
+   y: '0%',
    ease: Back.easeOut
   }, '-=0.3')
   .to(menu.find('.mega-menu__top, .mega-menu__right'), 0.5, {
@@ -76,7 +76,7 @@ $(document).ready(function () {
    x: 0,
    opacity: 1,
    stagger: {
-    each: 0.1,
+    each: 0.05,
    }
   }, '-=0.5')
  var trigger = $('#hamburger'),
