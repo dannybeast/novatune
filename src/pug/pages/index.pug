@@ -49,28 +49,31 @@ block content
   .container 
    +e.H3.title 
     span Почему мы?
-   +e.row 
-    +e.col 
-     +b.why-item 
-      +e.P.title Гарантия сохранности Вашего автомобиля в нашем техцентре
-      +e.description 
-       p Автомобили клиентов находятся под охраной  и наблюдением 24/7
-      +e.icon 
-       +icon('shield')
+   +e.swiper-container.swiper-container.js-swiper-why.swiper-no-swiping
 
-    +e.col 
-     +b.why-item 
-      +e.P.title Квалифицированный персонал с опытом работы более 15 лет
-      +e.description 
-       p Мы трепетно относимся к Вашему автомобилю
-      +e.icon 
-       +icon('application')
-    +e.col
-     +b.why-item(class="--primary")
-      +e.P.title Точный Онлайн расчет стоимости дооснащения для вашего авто
-      +e.bottom 
-       +b.A(href="#" class="btn --black --skew --large __btn") 
-        span Расчитать стоимость
+    +e.swiper-wrapper.swiper-wrapper 
+     +e.swiper-slide.swiper-slide
+      +b.why-item 
+       +e.P.title Гарантия сохранности Вашего автомобиля в нашем техцентре
+       +e.description 
+        p Автомобили клиентов находятся под охраной  и наблюдением 24/7
+       +e.icon 
+        +icon('shield')
+
+     +e.swiper-slide.swiper-slide
+      +b.why-item 
+       +e.P.title Квалифицированный персонал с опытом работы более 15 лет
+       +e.description 
+        p Мы трепетно относимся к Вашему автомобилю
+       +e.icon 
+        +icon('application')
+
+     +e.swiper-slide.swiper-slide
+      +b.why-item(class="--primary")
+       +e.P.title Точный Онлайн расчет стоимости дооснащения для вашего авто
+       +e.bottom 
+        +b.A(href="#" class="btn --black --skew --large __btn") 
+         span Расчитать стоимость
 
  include ../includes/modules/_models
 
@@ -107,16 +110,23 @@ block content
    ]
   .container 
    +e.row 
-    +e.col 
-     +b.H3.title Услуги <br>novatune
-     +e.desc С гарантией качества на срок владения автомобилем.
+    +e.col(class="--large-sm")
+     +e.content 
+      +b.H3.title Услуги <br>novatune
+      +e.desc С гарантией качества на срок владения автомобилем.
 
-     +b.A(href="services-media.html" class="btn --primary-line --skew --large __btn") 
-       span Перейти в каталог
+      +b.A(href="services-media.html" class="btn --primary-line --skew --large __btn") 
+        span Перейти в каталог
 
     each obj in services
-     +e.col 
+     +e.col(class=" hidden-sm")
       +services-item(obj)
+   +e.swiper-container.swiper-container.js-swiper-services
+ 
+    +e.swiper-wrapper.swiper-wrapper 
+     each obj in services
+      +e.swiper-slide.swiper-slide
+       +services-item(obj)
 
  include ../includes/modules/_works-accordion
 

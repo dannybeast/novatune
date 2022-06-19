@@ -8,6 +8,22 @@
    z-index: 8;
 
    padding: rem(35) 0;
+
+@include lg-block() {
+      position: fixed;
+      z-index: 9;
+      top: 0;
+      right: 0;
+      left: 0;
+
+      padding-top: 0;
+      padding-right: 15px;
+      padding-bottom: 0;
+      padding-left: 15px;
+
+      background: #fff;
+   }
+
    &__phone {
       font-weight: 700;
 
@@ -29,16 +45,27 @@
    }
    &__element {
       margin-left: rem(40);
+
+@include md-block() {
+         display: none;
+      }
    }
-   .hamburglar {
-      margin-right: rem(-15);
-      margin-bottom: rem(-30);
+   &__hamburger {
+      display: flex;
+
+      width: 60px;
+      height: 80px;
+      margin-left: rem(30);
 
       cursor: pointer;
-      transform: scale(0.7);
 
-@include from($break_sm) {
+@include from($break_lg) {
          display: none;
+      }  justify-content: center;
+      align-items: center;
+
+      .hamburger {
+         width: 18px;
       }
    }
 }

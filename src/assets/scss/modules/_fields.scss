@@ -1,9 +1,9 @@
-$fieldHeight: rem(55);
+$fieldHeight: 55px;
 
 // Field
 @mixin inputBase() {
    font-family: $main-font;
-   font-size: rem(16);
+   font-size: 16px;
 
    position: relative;
 
@@ -47,7 +47,7 @@ $fieldHeight: rem(55);
 }
 
 .field-label {
-   font-size: rem(16px);
+   font-size: 16px;
    line-height: 1.15;
 
    display: block;
@@ -81,14 +81,14 @@ $fieldHeight: rem(55);
 
          overflow: hidden;
 
-         padding-top: rem(15);
+         padding-top: 15px;
 
          transform: skew(10deg);
       }
       .field-label {
          position: absolute;
-         top: rem(18);
-         left: rem(20);
+         top: 18px;
+         left: 20px;
 
          transition: all 0.2s ease;
          transform: skew(10deg);

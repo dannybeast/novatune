@@ -2,6 +2,8 @@ import './js/modules/main';
 import sliderWorks from './js/sliders/sliderWorks';
 import sliderMainIntro from './js/sliders/sliderMainIntro';
 import sliderDetailsAdvantages from './js/sliders/sliderDetailsAdvantages';
+import sliderDetailsWhy from './js/sliders/sliderDetailsWhy';
+import sliderServices from './js/sliders/sliderServices';
 import Swiper from "swiper/swiper-bundle";
 import contactsMap from './js/modules/contacts-map';
 
@@ -30,9 +32,19 @@ var small = new Swiper(".js-swiper-gallery-small", {
   spaceBetween: 30,  
   slidesPerView: 3, 
   watchSlidesVisibility: true,
+  breakpoints: {
+   0: {
+    spaceBetween: 15,
+   }, 
+
+    768: {
+     spaceBetween: 30,  
+   },
+ },
   navigation:{
    prevEl: `.details__thrumbs [ref="prev"]`,
    nextEl: `.details__thrumbs [ref="next"]`,
+  
  }
 });
 if(document.querySelector('.js-swiper-gallery-large')){
@@ -43,6 +55,9 @@ if(document.querySelector('.js-swiper-gallery-large')){
 sliderMainIntro.init();
  sliderWorks.init();
  sliderDetailsAdvantages.init();
+ sliderDetailsWhy.init();
+ sliderServices.init();
+
 
  //
  $('.js-anchor').on('click', function(e) {
@@ -69,8 +84,6 @@ $('.slide-large').mouseleave(function(){
 $('.js-cursor').removeClass('is-zoom')
 })
 
-
-
 //
 
 var  materialInputs = '.field__inner input';
@@ -89,5 +102,22 @@ $(document).on('blur', materialInputs, function(e) {
     $(this).parent().removeClass('is-active');
 });
 //
+
+$(".header__hamburger").click(function(){
+ $(this).find('.hamburger').toggleClass("is-active"); 
+ $('.mobile-menu').toggleClass("is-active");
+ $('body').toggleClass("overflow");
+});
+
+
+
+$(".option").click(function(){
+ $(".option").removeClass("active");
+ $(this).addClass("active");
+ 
+});
+
+
+
   $('body').addClass('is-loaded')
 })

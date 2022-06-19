@@ -11,7 +11,10 @@
    &__row {
       display: flex;
 
-      background: url('../images/bg/bg.png') top right -15% no-repeat, url('../images/bg/bg2.png') top 100vh left no-repeat;
+      background: url('../images/bg/bg.png') top right no-repeat, url('../images/bg/bg2.png') top 100vh left no-repeat;
+@include lg-block() {
+         padding-top: 120px;
+      }
 
       flex-grow: 1;
    }
@@ -24,6 +27,8 @@
       justify-content: center;
       aspect-ratio: 1/1;
    }
+
+
    &__bar {
       position: relative;
 
@@ -31,7 +36,9 @@
 
       border-right: 1px solid $primary-color;
 
-      flex-shrink: 0;
+@include lg-block() {
+         display: none;
+      }  flex-shrink: 0;
 
       &-inner {
          position: sticky;

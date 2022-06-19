@@ -12,8 +12,8 @@ class sliderDetailsAdvantages {
       freeMode:true,
       breakpoints: {
        0: {
-        slidesPerView: 'auto',
-        spaceBetween: 10,
+        slidesPerView: 2.3,
+        spaceBetween: 15,
          noSwiping: false,
        }, 
        768: {

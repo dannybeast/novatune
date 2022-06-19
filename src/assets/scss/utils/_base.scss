@@ -11,9 +11,9 @@ html {
 
 @include notebookLg(font-size, 14px);
 
-@include lg(font-size, 13px);
-
-@include sm(font-size, 10px);
+@include lg(font-size, 13px);@include md(font-size, 12px);@include lg-block() {
+      overflow: hidden;
+   }
 }
 
 body {
@@ -81,10 +81,12 @@ body {
 }
 
 .container {
-   @include wrapper();
+   max-width: 1330px;
+
+@include wrapper();
 
 @include notebook-block() {
-      max-width: 1330px;
+      max-width: 1100px;
    }
 
 @include sm-block() {

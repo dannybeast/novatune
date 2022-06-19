@@ -36,7 +36,11 @@ gsap.timeline({
      scrub: 2, trigger: ".request", scroller: '.main-layout'
  }
 }).fromTo('.request__wheel',{y:0}, {y: 290, duration: 3})
-
+gsap.timeline({
+ scrollTrigger:{
+     scrub: 2, trigger: ".works-accordion", scroller: '.main-layout'
+ }
+}).fromTo('.works-accordion__decor',{y:0}, {y: 290, duration: 3})
 gsap.timeline({
  scrollTrigger:{
      scrub: 2, 

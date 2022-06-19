@@ -115,6 +115,47 @@ html(lang='ru')
             +e.buttons
               +b.BUTTON.btn(class="--white --skew --large")
                 span Отправить
+      
+      +b.mobile-menu 
+       +e.NAV.nav 
+        ul
+         li(class=( pageName === "home" ? " is-active" : undefined))
+           a(href="index.html") Главная
+         li(class=( pageName === "terms" ? " is-active" : undefined))
+           a(href="terms.html") О нас
+         li(class=( pageName === "services-media" ? " is-active" : undefined))
+           a(href="services-media.html") Услуги
+         li(class=( pageName === "works-and-services" ? " is-active" : undefined))
+           a(href="works-and-services.html") Наши работы
+         li(class=( pageName === "reviews" ? " is-active" : undefined))
+           a(href="reviews.html") Отзывы
+         li(class=( pageName === "contacts" ? " is-active" : undefined))
+           a(href="contacts.html") Контакты
+        
+       +e.element
+        +e.address г. Москва, Можайское шоссе, вл.166 
+
+       +e.element
+        +e.A(href="tel:+74956464489" class="phone") +7 (495) 646-44-89
+        
+       +b.contact-item
+        +e.P.name Мы в соцсетях:
+        +b.UL.social 
+         +e.LI 
+          +e.A(href="#" target="_blank")
+           +icon('instagram')
+         +e.LI 
+          +e.A(href="#" target="_blank")
+           +icon('youtube')
+         +e.LI 
+          +e.A(href="#" target="_blank")
+           +icon('whatsapp')
+         +e.LI 
+          +e.A(href="#" target="_blank")
+           +icon('vk')
+         +e.LI 
+          +e.A(href="#" target="_blank")
+           +icon('telegram')
       // Mega menu
       +b.mega-menu 
        .container
