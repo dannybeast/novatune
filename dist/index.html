@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Novatune - Мультимедиа для BMW 530d </title>
+    <meta name="description" content="Мультимедиа для BMW 530d">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/app.css">
+    <script type="text/javascript">
+      window.assets_path = 'assets/icons/sprite.svg'
+      
+    </script>
+  </head>
+  <body class="is-page-index">
+    <main class="wrapper" id="app">
+      <!-- Main layout-->
+      <div class="main-layout">
+        <div class="main-layout__row">
+          <div class="main-layout__bar"> 
+            <div class="main-layout__bar-inner">
+              <div class="main-layout__hamburger">
+<div class="hamburglar" id="hamburger">
+  <div class="burger-icon">
+    <div class="burger-container"><span class="burger-bun-top"></span><span class="burger-filling"></span><span class="burger-bun-bot"></span></div>
+  </div>
+  <!-- svg ring containter-->
+  <div class="burger-ring">
+    <svg class="svg-ring">
+      <path class="path" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="4" d="M 34 2 C 16.3 2 2 16.3 2 34 s 14.3 32 32 32 s 32 -14.3 32 -32 S 51.7 2 34 2"></path>
+    </svg>
+  </div>
+  <!-- the masked path that animates the fill to the ring-->
+  <svg width="0" height="0">
+    <mask id="mask">
+      <path xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#ff0000" stroke-miterlimit="10" stroke-width="4" d="M 34 2 c 11.6 0 21.8 6.2 27.4 15.5 c 2.9 4.8 5 16.5 -9.4 16.5 h -4"></path>
+    </mask>
+  </svg>
+  <div class="path-burger">
+    <div class="animate-path">
+      <div class="path-rotation"></div>
+    </div>
+  </div>
+</div>
+              </div>
+            </div>
+          </div>
+          <div class="main-layout__centered">
+            <div class="container">
+              <!-- Header-->
+              <header class="header"> 
+                <div class="header__row"><a class="header__logo" href="index.html"><img src="assets/images/logo/logo.png" alt=""></a>
+                  <div class="header__element">
+                    <div class="header__address">г. Москва, Можайское шоссе, вл.166 
+                    </div>
+                  </div>
+                  <div class="header__element"><a class="header__phone" href="tel:+74956464489">+7 (495) 646-44-89</a>
+                  </div>
+                  <div class="header__element"><a class="btn btn--primary-gradient header__btn" href="#" data-src="#callMe" data-fancybox="dialog"> <span>Заказать звонок</span></a>
+                  </div>
+                  <div class="header__hamburger">
+                    <div class="hamburger"><span class="line"></span><span class="line"></span><span class="line"></span></div>
+                  </div>
+                </div>
+              </header>
+            </div>
+            <article class="main-layout__content">
+              <!-- Begin page-->
+              <section class="main-intro">
+                <div class="main-intro__swiper-container swiper-container js-swiper-intro"> 
+                  <div class="main-intro__swiper-wrapper swiper-wrapper"> 
+                    <!-- Slide-->
+                    <div class="main-intro__swiper-slide swiper-slide">
+                      <div class="main-slide"> 
+                        <div class="container"> 
+                          <div class="main-slide__row"> 
+                            <div class="main-slide__content" data-swiper-parallax="-200">
+                              <h2 class="main-slide__title">Придайте индивидуальности своему автомобилю <span class="color-primary">в novatune</span>
+                              </h2>
+                              <div class="main-slide__description"> 
+                                <p>С гарантией качества на срок владения автомобилем. Опыт работы более 15 лет.</p>
+                              </div>
+                            </div>
+                            <div class="main-slide__media"> <img src="assets/images/main-intro/car.png" alt="" data-swiper-parallax="-300">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Slide-->
+                    <div class="main-intro__swiper-slide swiper-slide">
+                      <div class="main-slide"> 
+                        <div class="container"> 
+                          <div class="main-slide__row"> 
+                            <div class="main-slide__content" data-swiper-parallax="-200">
+                              <h2 class="main-slide__title">Придайте индивидуальности своему автомобилю <span class="color-primary">в novatune</span>
+                              </h2>
+                              <div class="main-slide__description"> 
+                                <p>С гарантией качества на срок владения автомобилем. Опыт работы более 15 лет.</p>
+                              </div>
+                            </div>
+                            <div class="main-slide__media"> <img src="assets/images/main-intro/car.png" alt="" data-swiper-parallax="-300">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="container"> 
+                    <div class="swiper-nav"> 
+                      <div class="swiper-nav__prev" ref="prev"> 
+                        <svg class="svg-icon">
+                          <use href="assets/icons/sprite.svg#icon-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="swiper-nav__next" ref="next">
+                        <svg class="svg-icon">
+                          <use href="assets/icons/sprite.svg#icon-arrow"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="why">
+                <div class="container"> 
+                  <h3 class="why__title"> <span>Почему мы?</span>
+                  </h3>
+                  <div class="why__swiper-container swiper-container js-swiper-why swiper-no-swiping">
+                    <div class="why__swiper-wrapper swiper-wrapper"> 
+                      <div class="why__swiper-slide swiper-slide">
+                        <div class="why-item"> 
+                          <p class="why-item__title">Гарантия сохранности Вашего автомобиля в нашем техцентре
+                          </p>
+                          <div class="why-item__description"> 
+                            <p>Автомобили клиентов находятся под охраной  и наблюдением 24/7</p>
+                          </div>
+                          <div class="why-item__icon"> 
+                            <svg class="svg-icon">
+                              <use href="assets/icons/sprite.svg#icon-shield"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="why__swiper-slide swiper-slide">
+                        <div class="why-item"> 
+                          <p class="why-item__title">Квалифицированный персонал с опытом работы более 15 лет
+                          </p>
+                          <div class="why-item__description"> 
+                            <p>Мы трепетно относимся к Вашему автомобилю</p>
+                          </div>
+                          <div class="why-item__icon"> 
+                            <svg class="svg-icon">
+                              <use href="assets/icons/sprite.svg#icon-application"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="why__swiper-slide swiper-slide">
+                        <div class="why-item why-item--primary">
+                          <p class="why-item__title">Точный Онлайн расчет стоимости дооснащения для вашего авто
+                          </p>
+                          <div class="why-item__bottom"> <a class="btn btn--black btn--skew btn--large why-item__btn" href="#" data-src="#callMe" data-fancybox="dialog"> <span>Расчитать стоимость</span></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="models">
+                <div class="container"> 
+                  <ul>
+                    <li><a href="#" target="_blank"><img src="assets/images/model/1.png" alt=""></a></li>
+                    <li><a href="#" target="_blank"><img src="assets/images/model/2.png" alt=""></a></li>
+                    <li><a href="#" target="_blank"><img src="assets/images/model/3.png" alt=""></a></li>
+                    <li><a href="#" target="_blank"><img src="assets/images/model/4.png" alt=""></a></li>
+                    <li><a href="#" target="_blank"><img src="assets/images/model/5.png" alt=""></a></li>
+                    <li><a href="#" target="_blank"><img src="assets/images/model/6.png" alt=""></a></li>
+                    <li><a href="#" target="_blank"><img src="assets/images/model/7.png" alt=""></a></li>
+                    <li><a href="#" target="_blank"><img src="assets/images/model/8.png" alt=""></a></li>
+                    <li><a href="#" target="_blank"><img src="assets/images/model/9.png" alt=""></a></li>
+                    <li><a href="#" target="_blank"><img src="assets/images/model/10.png" alt=""></a></li>
+                    <li><a href="#" target="_blank"><img src="assets/images/model/11.png" alt=""></a></li>
+                    <li><a href="#" target="_blank"><img src="assets/images/model/12.png" alt=""></a></li>
+                    <li><a href="#" target="_blank"><img src="assets/images/model/13.png" alt=""></a></li>
+                    <li><a href="#" target="_blank"><img src="assets/images/model/14.png" alt=""></a></li>
+                    <li><a href="#" target="_blank"><img src="assets/images/model/15.png" alt=""></a></li>
+                    <li><a href="#" target="_blank"><img src="assets/images/model/16.png" alt=""></a></li>
+                    <li><a href="#" target="_blank"><img src="assets/images/model/17.png" alt=""></a></li>
+                    <li><a href="#" target="_blank"><img src="assets/images/model/18.png" alt=""></a></li>
+                    <li><a href="#" target="_blank"><img src="assets/images/model/19.png" alt=""></a></li>
+                    <li><a href="#" target="_blank"><img src="assets/images/model/20.png" alt=""></a></li>
+                    <li><a href="#" target="_blank"><img src="assets/images/model/21.png" alt=""></a></li>
+                    <li><a href="#" target="_blank"><img src="assets/images/model/22.png" alt=""></a></li>
+                  </ul>
+                </div>
+              </section>
+              <section class="complex">
+                <div class="container"> 
+                  <div class="complex__block">
+                    <div class="complex__row"> 
+                      <div class="complex__title"><strong>Подберите комплекс</strong> дооснащения для вашего авто:
+                      </div>
+                      <form class="complex__form js-validation-form">
+                        <div class="field field--light">
+                          <div class="field__inner"> 
+                            <input type="text" name="brand" required>
+                            <label class="field-label">Выберите марку *</label>
+                          </div>
+                        </div>
+                        <div class="field field--light">
+                          <div class="field__inner"> 
+                            <input type="text" name="model" required>
+                            <label class="field-label">Выберите модель *</label>
+                          </div>
+                        </div>
+                        <button class="btn btn--primary-gradient btn--skew btn--large"><span>Подобрать</span>
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="services">
+                <div class="container"> 
+                  <div class="services__row"> 
+                    <div class="services__col services__col--large-sm">
+                      <div class="services__content"> 
+                        <h3 class="title">Услуги <br>novatune
+                        </h3>
+                        <div class="services__desc">С гарантией качества на срок владения автомобилем.
+                        </div><a class="btn btn--primary-line btn--skew btn--large services__btn" href="services-media.html"> <span>Перейти в каталог</span></a>
+                      </div>
+                    </div>
+                    <div class="services__col hidden-sm"><a class="services-item" href="services-details.html"> <span class="services-item__inner-wrap"><span class="services-item__bg" style="background-image:url('assets/images/work/2.png')"></span><span class="services-item__inner"><span class="services-item__title">Навигационно-мультимедийные системы для штатных мониторов</span><span class="services-item__btn-wrap"><span class="btn btn--primary-gradient btn--skew"> <span>Подробнее</span></span></span></span></span></a>
+                    </div>
+                    <div class="services__col hidden-sm"><a class="services-item" href="services-details.html"> <span class="services-item__inner-wrap"><span class="services-item__bg" style="background-image:url('assets/images/work/3.png')"></span><span class="services-item__inner"><span class="services-item__title">Расширенный CarPlay и Android Auto в любой авто</span><span class="services-item__btn-wrap"><span class="btn btn--primary-gradient btn--skew"> <span>Подробнее</span></span></span></span></span></a>
+                    </div>
+                    <div class="services__col hidden-sm"><a class="services-item" href="services-details.html"> <span class="services-item__inner-wrap"><span class="services-item__bg" style="background-image:url('assets/images/work/4.png')"></span><span class="services-item__inner"><span class="services-item__title">Автоматические доводчики дверей</span><span class="services-item__btn-wrap"><span class="btn btn--primary-gradient btn--skew"> <span>Подробнее</span></span></span></span></span></a>
+                    </div>
+                    <div class="services__col hidden-sm"><a class="services-item" href="services-details.html"> <span class="services-item__inner-wrap"><span class="services-item__bg" style="background-image:url('assets/images/work/5.png')"></span><span class="services-item__inner"><span class="services-item__title">Авто-ателье перетяжка и перешив салона, офис на колесах</span><span class="services-item__btn-wrap"><span class="btn btn--primary-gradient btn--skew"> <span>Подробнее</span></span></span></span></span></a>
+                    </div>
+                    <div class="services__col hidden-sm"><a class="services-item" href="services-details.html"> <span class="services-item__inner-wrap"><span class="services-item__bg" style="background-image:url('assets/images/work/17.png')"></span><span class="services-item__inner"><span class="services-item__title">Внешний тюнинг, обвесы, карбон</span><span class="services-item__btn-wrap"><span class="btn btn--primary-gradient btn--skew"> <span>Подробнее</span></span></span></span></span></a>
+                    </div>
+                    <div class="services__col hidden-sm"><a class="services-item" href="services-details.html"> <span class="services-item__inner-wrap"><span class="services-item__bg" style="background-image:url('assets/images/work/7.png')"></span><span class="services-item__inner"><span class="services-item__title">Автосвет, подсветка, диоды, ambient light</span><span class="services-item__btn-wrap"><span class="btn btn--primary-gradient btn--skew"> <span>Подробнее</span></span></span></span></span></a>
+                    </div>
+                    <div class="services__col hidden-sm"><a class="services-item" href="services-details.html"> <span class="services-item__inner-wrap"><span class="services-item__bg" style="background-image:url('assets/images/work/8.png')"></span><span class="services-item__inner"><span class="services-item__title">Тонировка пленкой, атермальная и электро-тонировка</span><span class="services-item__btn-wrap"><span class="btn btn--primary-gradient btn--skew"> <span>Подробнее</span></span></span></span></span></a>
+                    </div>
+                    <div class="services__col hidden-sm"><a class="services-item" href="services-details.html"> <span class="services-item__inner-wrap"><span class="services-item__bg" style="background-image:url('assets/images/work/9.png')"></span><span class="services-item__inner"><span class="services-item__title">Установка комплексных систем защиты авто</span><span class="services-item__btn-wrap"><span class="btn btn--primary-gradient btn--skew"> <span>Подробнее</span></span></span></span></span></a>
+                    </div>
+                  </div>
+                  <div class="services__swiper-container swiper-container js-swiper-services">
+                    <div class="services__swiper-wrapper swiper-wrapper"> 
+                      <div class="services__swiper-slide swiper-slide"><a class="services-item" href="services-details.html"> <span class="services-item__inner-wrap"><span class="services-item__bg" style="background-image:url('assets/images/work/2.png')"></span><span class="services-item__inner"><span class="services-item__title">Навигационно-мультимедийные системы для штатных мониторов</span><span class="services-item__btn-wrap"><span class="btn btn--primary-gradient btn--skew"> <span>Подробнее</span></span></span></span></span></a>
+                      </div>
+                      <div class="services__swiper-slide swiper-slide"><a class="services-item" href="services-details.html"> <span class="services-item__inner-wrap"><span class="services-item__bg" style="background-image:url('assets/images/work/3.png')"></span><span class="services-item__inner"><span class="services-item__title">Расширенный CarPlay и Android Auto в любой авто</span><span class="services-item__btn-wrap"><span class="btn btn--primary-gradient btn--skew"> <span>Подробнее</span></span></span></span></span></a>
+                      </div>
+                      <div class="services__swiper-slide swiper-slide"><a class="services-item" href="services-details.html"> <span class="services-item__inner-wrap"><span class="services-item__bg" style="background-image:url('assets/images/work/4.png')"></span><span class="services-item__inner"><span class="services-item__title">Автоматические доводчики дверей</span><span class="services-item__btn-wrap"><span class="btn btn--primary-gradient btn--skew"> <span>Подробнее</span></span></span></span></span></a>
+                      </div>
+                      <div class="services__swiper-slide swiper-slide"><a class="services-item" href="services-details.html"> <span class="services-item__inner-wrap"><span class="services-item__bg" style="background-image:url('assets/images/work/5.png')"></span><span class="services-item__inner"><span class="services-item__title">Авто-ателье перетяжка и перешив салона, офис на колесах</span><span class="services-item__btn-wrap"><span class="btn btn--primary-gradient btn--skew"> <span>Подробнее</span></span></span></span></span></a>
+                      </div>
+                      <div class="services__swiper-slide swiper-slide"><a class="services-item" href="services-details.html"> <span class="services-item__inner-wrap"><span class="services-item__bg" style="background-image:url('assets/images/work/17.png')"></span><span class="services-item__inner"><span class="services-item__title">Внешний тюнинг, обвесы, карбон</span><span class="services-item__btn-wrap"><span class="btn btn--primary-gradient btn--skew"> <span>Подробнее</span></span></span></span></span></a>
+                      </div>
+                      <div class="services__swiper-slide swiper-slide"><a class="services-item" href="services-details.html"> <span class="services-item__inner-wrap"><span class="services-item__bg" style="background-image:url('assets/images/work/7.png')"></span><span class="services-item__inner"><span class="services-item__title">Автосвет, подсветка, диоды, ambient light</span><span class="services-item__btn-wrap"><span class="btn btn--primary-gradient btn--skew"> <span>Подробнее</span></span></span></span></span></a>
+                      </div>
+                      <div class="services__swiper-slide swiper-slide"><a class="services-item" href="services-details.html"> <span class="services-item__inner-wrap"><span class="services-item__bg" style="background-image:url('assets/images/work/8.png')"></span><span class="services-item__inner"><span class="services-item__title">Тонировка пленкой, атермальная и электро-тонировка</span><span class="services-item__btn-wrap"><span class="btn btn--primary-gradient btn--skew"> <span>Подробнее</span></span></span></span></span></a>
+                      </div>
+                      <div class="services__swiper-slide swiper-slide"><a class="services-item" href="services-details.html"> <span class="services-item__inner-wrap"><span class="services-item__bg" style="background-image:url('assets/images/work/9.png')"></span><span class="services-item__inner"><span class="services-item__title">Установка комплексных систем защиты авто</span><span class="services-item__btn-wrap"><span class="btn btn--primary-gradient btn--skew"> <span>Подробнее</span></span></span></span></span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="works-accordion">
+                <div class="works-accordion__decor"> <img src="assets/images/bg/disk.png" alt="">
+                </div>
+                <div class="container"> 
+                  <div class="works-accordion__top"> 
+                    <h3 class="title"><span class="color-primary">Работы,</span><br> которыми мы гордимся
+                    </h3>
+                  </div>
+                  <div class="options">
+                    <div class="option active" style="background:url(assets/images/1.png)">
+                      <div class="label">
+                        <div class="option-info">
+                          <div class="option-info__title">Установка задних мониторов на андройд в штатные места, с личными пультами управления и наушниками 
+                            <svg class="svg-icon">
+                              <use href="assets/icons/sprite.svg#icon-zoom"></use>
+                            </svg>
+                          </div>
+                          <div class="option-info__tags"> 
+                            <div class="option-info__tag">Mersedes 
+                            </div>
+                            <div class="option-info__tag">s223 
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="option" style="background:url(assets/images/1.png)">
+                      <div class="label">
+                        <div class="option-info">
+                          <div class="option-info__title">Установка задних мониторов на андройд в штатные места, с личными пультами управления и наушниками 
+                            <svg class="svg-icon">
+                              <use href="assets/icons/sprite.svg#icon-zoom"></use>
+                            </svg>
+                          </div>
+                          <div class="option-info__tags"> 
+                            <div class="option-info__tag">Mersedes 
+                            </div>
+                            <div class="option-info__tag">s223 
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="option" style="background:url(assets/images/1.png)">
+                      <div class="label">
+                        <div class="option-info">
+                          <div class="option-info__title">Установка задних мониторов на андройд в штатные места, с личными пультами управления и наушниками 
+                            <svg class="svg-icon">
+                              <use href="assets/icons/sprite.svg#icon-zoom"></use>
+                            </svg>
+                          </div>
+                          <div class="option-info__tags"> 
+                            <div class="option-info__tag">Mersedes 
+                            </div>
+                            <div class="option-info__tag">s223 
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="option" style="background:url(assets/images/1.png)">
+                      <div class="label">
+                        <div class="option-info">
+                          <div class="option-info__title">Установка задних мониторов на андройд в штатные места, с личными пультами управления и наушниками 
+                            <svg class="svg-icon">
+                              <use href="assets/icons/sprite.svg#icon-zoom"></use>
+                            </svg>
+                          </div>
+                          <div class="option-info__tags"> 
+                            <div class="option-info__tag">Mersedes 
+                            </div>
+                            <div class="option-info__tag">s223 
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="option" style="background:url(assets/images/1.png)">
+                      <div class="label">
+                        <div class="option-info">
+                          <div class="option-info__title">Установка задних мониторов на андройд в штатные места, с личными пультами управления и наушниками 
+                            <svg class="svg-icon">
+                              <use href="assets/icons/sprite.svg#icon-zoom"></use>
+                            </svg>
+                          </div>
+                          <div class="option-info__tags"> 
+                            <div class="option-info__tag">Mersedes 
+                            </div>
+                            <div class="option-info__tag">s223 
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="works-accordion__bottom"> <a class="btn btn--primary-line btn--skew btn--large works-accordion__btn" href="reviews.html"> <span>Все работы novatune</span></a>
+                  </div>
+                </div>
+              </section>
+              <section class="setup-center"> 
+                <div class="container"> 
+                  <h3 class="title"><span class="color-primary">Наш удобный</span> установочный центр
+                  </h3>
+                  <div class="setup-center__svg-wrap">
+                    <svg version="1.1" id="Группа_47_00000075867144545469965440000008781047435793621652_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" viewBox="0 0 1371 602" style="enable-background:new 0 0 1371 602" xml:space="preserve">
+                      <g id="_x34_4-love_xA0_Изображение_00000176746267456227263850000006421516870342724499_">
+                        <image style="overflow:visible" width="1371" height="567" id="_x34_4-love_xA0_Изображение" xlink:href="assets/images/setup-center/CE1B49B6.png" transform="translate(0 35)"></image>
+                      </g>
+                      <path class="st0" d="M274.5 234.25c-6.21 0-11.25 5.04-11.25 11.25s5.04 11.25 11.25 11.25 11.25-5.04 11.25-11.25-5.04-11.25-11.25-11.25z" id="Эллипс_1_копия_3"></path>
+                      <path d="M274.56 238.75c-3.62 0-6.56 2.94-6.56 6.56 0 3.62 2.94 6.56 6.56 6.56 3.62 0 6.56-2.94 6.56-6.56 0-3.62-2.93-6.56-6.56-6.56z" style="fill:#98121f" id="Эллипс_1_копия_6"></path>
+                      <g id="Слой_154_xA0_Изображение_00000011720528265494945420000000308106940618921882_">
+                        <image style="overflow:visible" width="294" height="124" id="Слой_154_xA0_Изображение" xlink:href="assets/images/setup-center/CE1B49BA.png" transform="translate(127 106)"></image>
+                      </g>
+                      <path d="M835.74 196.39H705.26c-3.54 0-6.4 2.83-6.4 6.31l-32.02 128.57c0 3.49 2.87 6.31 6.4 6.31h130.48c3.54 0 6.4-2.83 6.4-6.31l32.02-128.57c.01-3.48-2.86-6.31-6.4-6.31z" style="fill:#1f1f1f" id="Прямоугольник_11"></path>
+                      <g id="Прямоугольник_11_копия_4_xA0_Изображение_00000004506986576325934460000004728275362318739109_">
+                        <image style="overflow:visible" width="120" height="97" id="Прямоугольник_11_копия_4_xA0_Изображение" xlink:href="assets/images/setup-center/CE1B49BD.png" transform="translate(897 353)"></image>
+                      </g>
+                      <g class="st3" id="Прямоугольник_11_копия_5__x2B__Слой_165_00000074401368564525004650000015166835735933459120_">
+                        <defs>
+                          <path class="st3" id="SVGID_1_" d="M1131.13 454.06H998.25c-3.6 0-6.52 2.88-6.52 6.43l-32.61 130.94c0 3.55 2.92 6.43 6.52 6.43h132.88c3.6 0 6.52-2.88 6.52-6.43l32.61-130.94c0-3.55-2.92-6.43-6.52-6.43z"></path>
+                        </defs>
+                        <clippath id="SVGID_00000121984835914853077520000005937437405462363570_">
+                          <use xlink:href="#SVGID_1_" style="overflow:visible"></use>
+                        </clippath>
+                        <g style="clip-path:url(#SVGID_00000121984835914853077520000005937437405462363570_)">
+                          <image style="overflow:visible" width="179" height="144" id="Прямоугольник_11_копия_5__x2B__Слой_165_xA0_Изображение" xlink:href="assets/images/setup-center/CE1B49BE.png" transform="translate(959 454)"></image>
+                        </g>
+                      </g>
+                      <g id="Прямоугольник_11_копия_3_xA0_Изображение_00000129188568908812615020000014669222514156322960_">
+                        <image style="overflow:visible" width="217" height="175" id="Прямоугольник_11_копия_3_xA0_Изображение" xlink:href="assets/images/setup-center/CE1B49BC.png" transform="translate(456 254)"></image>
+                      </g>
+                      <g id="Прямоугольник_11_копия_6_xA0_Изображение_00000056393535187058475080000000222546335999611574_">
+                        <image style="overflow:visible" width="93" height="75" id="Прямоугольник_11_копия_6_xA0_Изображение" xlink:href="assets/images/setup-center/CE1B49BB.png" transform="translate(354 428)"></image>
+                      </g>
+                      <g class="st3" id="Прямоугольник_11_копия__x2B__Слой_164_00000000913358152363234940000012245732822077225908_">
+                        <defs>
+                          <path class="st3" id="SVGID_00000000189786749565355170000002710727616629012133_" d="M892.06 353.79H671.87c-5.97 0-10.81 4.84-10.81 10.81l-54.03 220.18c0 5.97 4.84 10.81 10.81 10.81h220.18c5.97 0 10.81-4.84 10.81-10.81l54.03-220.18c0-5.97-4.84-10.81-10.8-10.81z"></path>
+                        </defs>
+                        <clippath id="SVGID_00000031167461799171476300000006153844974234897070_">
+                          <use xlink:href="#SVGID_00000000189786749565355170000002710727616629012133_" style="overflow:visible"></use>
+                        </clippath>
+                        <g style="clip-path:url(#SVGID_00000031167461799171476300000006153844974234897070_)">
+                          <image style="overflow:visible" width="296" height="243" id="Прямоугольник_11_копия__x2B__Слой_164_xA0_Изображение" xlink:href="assets/images/setup-center/CE1B49B5.png" transform="translate(607 353)"></image>
+                        </g>
+                      </g>
+                      <g class="st3" id="Прямоугольник_11_копия_2__x2B__Слой_163_00000161606348572906896520000017513905869245447074_">
+                        <defs>
+                          <path class="st3" id="SVGID_00000172442567889862938330000005107689595115660198_" d="M1300.47.33H993.36c-8.32 0-15.07 6.75-15.07 15.07l-75.36 307.11c0 8.32 6.75 15.07 15.07 15.07h307.11c8.32 0 15.07-6.75 15.07-15.07l75.36-307.11c0-8.32-6.74-15.07-15.07-15.07z"></path>
+                        </defs>
+                        <clippath id="SVGID_00000170270628180175201700000012664314036085716628_">
+                          <use xlink:href="#SVGID_00000172442567889862938330000005107689595115660198_" style="overflow:visible"></use>
+                        </clippath>
+                        <g style="clip-path:url(#SVGID_00000170270628180175201700000012664314036085716628_)">
+                          <image style="overflow:visible" width="414" height="338" id="Прямоугольник_11_копия_2__x2B__Слой_163_xA0_Изображение" xlink:href="assets/images/setup-center/CE1B49B7.png" transform="translate(902)"></image>
+                        </g>
+                      </g>
+                      <text class="address-city" transform="translate(231.864 139.53)" style="font-size:20px" id="Москва">Москва</text>
+                      <g id="Можайское_шоссе_вл.166___x2B_7_x28_495_x29_646-44-89_00000114791368897226024320000012215570939953230760_">
+                        <text id="Можайское_шоссе_вл.166___x2B_7_x28_495_x29_646-44-89" transform="translate(175.733 171.53)">
+                          <tspan class="st0 st6 st7 address-svg" x="0" y="0">Можайское шоссе вл.166 </tspan>
+                          <tspan class="st0 st6 st7" x="40.48" y="27">+7(495)646-44-89</tspan>
+                        </text>
+                      </g>
+                    </svg>
+                  </div>
+                  <div class="setup-center__bottom"> <a class="btn btn--primary-gradient btn--skew btn--large setup-center__btn" href="#" data-src="#callMe" data-fancybox="dialog"> <span>Записаться на визит в установочный центр</span></a>
+                  </div>
+                </div>
+              </section>
+              <section class="request">
+                <div class="request__wheel"> <img src="assets/images/bg/wheel.png" alt="">
+                </div>
+                <div class="container"> 
+                  <div class="request__block"> 
+                    <div class="request__block-row"> 
+                      <div class="request__block-col"> 
+                        <form class="request__form js-validation-form">
+                          <div class="row"> 
+                            <div class="col-12">
+                              <div class="field"> 
+                                <div class="field__inner">
+                                  <input type="text" name="name" required>
+                                  <label class="field-label">Ваше имя *</label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-12">
+                              <div class="field">
+                                <div class="field__inner"> 
+                                  <input class="js-phone-mask" type="text" name="phone" required>
+                                  <label class="field-label">Номер телефона *</label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-sm-6">
+                              <div class="field">
+                                <div class="field__inner"> 
+                                  <input type="text" name="brand">
+                                  <label class="field-label">Марка авто</label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-sm-6">
+                              <div class="field">
+                                <div class="field__inner"> 
+                                  <input type="text" name="model">
+                                  <label class="field-label">Модель авто</label>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <button class="btn btn--primary-gradient btn--skew btn--large"><span>Записаться на консультацию</span>
+                          </button>
+                        </form>
+                      </div>
+                      <div class="request__block-col"> 
+                        <h4 class="request__title"><span class="color-primary">Оставьте заявку</span> и в течении 1 часа получите бесплатную консультацию
+                        </h4>
+                      </div>
+                    </div>
+                    <div class="form-advantages"> 
+                      <div class="form-advantages__row"> 
+                        <div class="form-advantages__col"> 
+                          <div class="form-advantage">
+                            <div class="form-advantage__icon"> 
+                              <svg class="svg-icon">
+                                <use href="assets/icons/sprite.svg#icon-geo"></use>
+                              </svg>
+                            </div>
+                            <div class="form-advantage__name">установочный центр
+                            </div>
+                            <div class="form-advantage__text"> 
+                              <p>г. Москва, ул. Вавилова, д. 13а</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-advantages__col"> 
+                          <div class="form-advantage">
+                            <div class="form-advantage__icon"> 
+                              <svg class="svg-icon">
+                                <use href="assets/icons/sprite.svg#icon-clock"></use>
+                              </svg>
+                            </div>
+                            <div class="form-advantage__name">Часы работы
+                            </div>
+                            <div class="form-advantage__text"> 
+                              <p>Понедельник - пятница: 9:30-19:00</p>
+                              <p>Суббота: 10:00-16:00</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-advantages__col"> 
+                          <div class="form-advantage">
+                            <div class="form-advantage__icon"> 
+                              <svg class="svg-icon">
+                                <use href="assets/icons/sprite.svg#icon-whatsapp"></use>
+                              </svg>
+                            </div>
+                            <div class="form-advantage__name">Контакты
+                            </div>
+                            <div class="form-advantage__text"> 
+                              <p>Бесплатный звонок: 8-916-832-53-54</p>
+                              <p>WhatsApp: +7 (495) 922-91-51</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-advantages__col"> 
+                          <div class="form-advantage">
+                            <div class="form-advantage__icon"> 
+                              <svg class="svg-icon">
+                                <use href="assets/icons/sprite.svg#icon-email"></use>
+                              </svg>
+                            </div>
+                            <div class="form-advantage__name">Напишите нам
+                            </div>
+                            <div class="form-advantage__text"> <a href="mailto:mail@novatune.ru">mail@novatune.ru</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section class="works">
+                <div class="container"> 
+                  <div class="works__top"> 
+                    <h3 class="title"><span class="color-primary">Отзывы</span> наших клиентов
+                    </h3>
+                    <div class="swiper-nav"> 
+                      <div class="swiper-nav__prev" ref="prev"> 
+                        <svg class="svg-icon">
+                          <use href="assets/icons/sprite.svg#icon-arrow"></use>
+                        </svg>
+                      </div>
+                      <div class="swiper-nav__next" ref="next">
+                        <svg class="svg-icon">
+                          <use href="assets/icons/sprite.svg#icon-arrow"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="works__swiper-container swiper-container js-swiper-works"> 
+                    <div class="works__swiper-wrapper swiper-wrapper"> 
+                      <div class="works__swiper-slide swiper-slide"><a class="work-item js-youtube-video" href="https://youtu.be/MzsJF91uooA" data-fancybox="works"><img src="" alt=""></a>
+                      </div>
+                      <div class="works__swiper-slide swiper-slide"><a class="work-item js-youtube-video" href="https://youtu.be/9-BCi8CB1zk" data-fancybox="works"><img src="" alt=""></a>
+                      </div>
+                      <div class="works__swiper-slide swiper-slide"><a class="work-item js-youtube-video" href="https://youtu.be/MzsJF91uooA" data-fancybox="works"><img src="" alt=""></a>
+                      </div>
+                      <div class="works__swiper-slide swiper-slide"><a class="work-item js-youtube-video" href="https://youtu.be/MzsJF91uooA" data-fancybox="works"><img src="" alt=""></a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="works__bottom"> <a class="btn btn--primary-line btn--skew btn--large works__btn" href="reviews.html"> <span>Смотреть все отзывы</span></a>
+                  </div>
+                </div>
+              </section>
+              <!-- End page  -->
+            </article>
+          </div>
+        </div>
+        <!-- Footer-->
+        <footer class="footer"> 
+          <div class="container">
+            <div class="footer__row"> <a class="footer__logo" href="index.html"><img src="assets/images/logo/logo.png" alt=""></a>
+              <div class="footer__element">
+                <div class="footer__address">г. Москва, Можайское шоссе, вл.166 
+                </div>
+              </div>
+              <div class="footer__element"><a class="footer__phone" href="tel:+74956464489">+7 (495) 646-44-89</a>
+              </div>
+              <div class="footer__element"><a class="btn btn--primary-line footer__btn" href="#" data-src="#callMe" data-fancybox="dialog">Заказать звонок</a>
+              </div>
+            </div>
+            <div class="footer__row"> 
+              <p class="footer__copyright">© <span class="js-current-year"></span>, Все права защищены. NOVATUNE.
+              </p>
+              <ul class="footer__bottom-links">
+                <li><a href="terms.html">Правила обработки персональных данных</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+        <!-- Заказать звонок-->
+        <div class="modal modal--primary" id="callMe">
+          <div class="modal__title">Обратный звонок
+          </div>
+          <form class="modal__form js-validation-form">
+            <div class="row"> 
+              <div class="col-12">
+                <div class="field field--white-light">
+                  <div class="field__inner">
+                    <input type="text" name="name" required>
+                    <label class="field-label">Ваше имя *</label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="field field--white-light">
+                  <div class="field__inner"> 
+                    <input class="js-phone-mask" type="text" name="phone" required>
+                    <label class="field-label">Номер телефона *</label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="field field--white-light">
+                  <div class="field__inner"> 
+                    <input type="text" name="brand">
+                    <label class="field-label">Марка авто</label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="field field--white-light">
+                  <div class="field__inner"> 
+                    <input type="text" name="model">
+                    <label class="field-label">Модель авто</label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="field field--white-light">
+                  <div class="field__inner">
+                    <input type="text" name="comment">
+                    <label class="field-label">Комментарий</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal__buttons">
+              <button class="btn btn--white btn--skew btn--large"><span>Заказать звонок</span>
+              </button>
+            </div>
+          </form>
+        </div>
+        <!-- Заказать услугу-->
+        <div class="modal modal--primary" id="orderService">
+          <div class="modal__title">Заказать камеру заднего вида на BMW X3 F25
+          </div>
+          <form class="modal__form js-validation-form">
+            <div class="row"> 
+              <div class="col-12">
+                <div class="field field--white-light">
+                  <div class="field__inner">
+                    <input type="text" name="name" required>
+                    <label class="field-label">Ваше имя *</label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="field field--white-light">
+                  <div class="field__inner"> 
+                    <input class="js-phone-mask" type="text" name="phone" required>
+                    <label class="field-label">Номер телефона *</label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="field field--white-light">
+                  <div class="field__inner">
+                    <input type="text" name="email">
+                    <label class="field-label">Ваш email:</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal__buttons">
+              <button class="btn btn--white btn--skew btn--large"><span>Отправить</span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="mobile-menu"> 
+        <nav class="mobile-menu__nav"> 
+          <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="about.html">О нас</a></li>
+            <li><a href="services-media.html">Услуги</a></li>
+            <li><a href="works-and-services.html">Наши работы</a></li>
+            <li><a href="reviews.html">Отзывы</a></li>
+            <li><a href="contacts.html">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="mobile-menu__element">
+          <div class="mobile-menu__address">г. Москва, Можайское шоссе, вл.166 
+          </div>
+        </div>
+        <div class="mobile-menu__element"><a class="mobile-menu__phone" href="tel:+74956464489">+7 (495) 646-44-89</a>
+        </div>
+        <div class="contact-item">
+          <p class="contact-item__name">Мы в соцсетях:
+          </p>
+          <ul class="social"> 
+            <li> <a href="#" target="_blank">
+              <svg class="svg-icon">
+                <use href="assets/icons/sprite.svg#icon-instagram"></use>
+              </svg></a>
+            </li>
+            <li> <a href="#" target="_blank">
+              <svg class="svg-icon">
+                <use href="assets/icons/sprite.svg#icon-youtube"></use>
+              </svg></a>
+            </li>
+            <li> <a href="#" target="_blank">
+              <svg class="svg-icon">
+                <use href="assets/icons/sprite.svg#icon-whatsapp"></use>
+              </svg></a>
+            </li>
+            <li> <a href="#" target="_blank">
+              <svg class="svg-icon">
+                <use href="assets/icons/sprite.svg#icon-vk"></use>
+              </svg></a>
+            </li>
+            <li> <a href="#" target="_blank">
+              <svg class="svg-icon">
+                <use href="assets/icons/sprite.svg#icon-telegram"></use>
+              </svg></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Mega menu-->
+      <div class="mega-menu"> 
+        <div class="container">
+          <div class="mega-menu__top">
+            <!-- Header-->
+            <header class="header"> 
+              <div class="header__row"><a class="header__logo" href="index.html"><img src="assets/images/logo/logo.png" alt=""></a>
+                <div class="header__element">
+                  <div class="header__address">г. Москва, Можайское шоссе, вл.166 
+                  </div>
+                </div>
+                <div class="header__element"><a class="header__phone" href="tel:+74956464489">+7 (495) 646-44-89</a>
+                </div>
+                <div class="header__element"><a class="btn btn--primary-gradient header__btn" href="#" data-src="#callMe" data-fancybox="dialog"> <span>Заказать звонок</span></a>
+                </div>
+                <div class="header__hamburger">
+                  <div class="hamburger"><span class="line"></span><span class="line"></span><span class="line"></span></div>
+                </div>
+              </div>
+            </header>
+          </div>
+          <div class="mega-menu__center">
+            <nav class="mega-menu__nav"> 
+              <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="services-media.html">Услуги</a></li>
+                <li><a href="works-and-services.html">Наши работы</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

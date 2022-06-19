@@ -143,6 +143,9 @@
    cursor: pointer;
 
    border-radius: rem(16);
+   img {
+      width: 100%;
+   }
 }
 .details-advantage {
    font-size: 12px;
@@ -250,6 +253,8 @@
          font-size: rem(33px);
          font-weight: 300;
 
+         position: relative;
+
          text-decoration: none;
 
          color: #000;
@@ -258,13 +263,91 @@
             font-size: rem(28px);
          }
 
+         &::before {
+            transform: scaleX(0);
+            transform-origin: bottom right;
+         }
+
+         &:hover::before {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+         }
+
+         &::before {
+            position: absolute;
+            z-index: -1;
+            top: -5px;
+            right: -5px;
+            bottom: -5px;
+            left: -5px;
+
+            display: block;
+
+            content: ' ';
+            transition: transform 0.3s ease;
+
+            background: $primary-color;
+
+            inset: 0 0 0 0;
+         }
+
          &:hover {
-            color: $primary-color;
+            color: $white;
          }
       }
    }
 }
 
+.big-gallery {
+   .js-swiper-gal-large {
+      position: relative;
+
+      overflow: visible;
+
+      margin-bottom: rem(40);
+   }   &__next {
+      left: 100%;
+      svg {
+         transform: scale(-1,1);
+      }
+   }
+   &__prev {
+      right: 100%;
+   }
+   &__prev,
+   &__next {
+      position: absolute;
+      top: 50%;
+
+      display: flex;
+
+      width: rem(40);
+
+      cursor: pointer;
+      transform: translateY(-50%);
+
+@include sm-block() {
+         width: 20px;
+      }  justify-content: center;
+
+      svg {
+         width: rem(28);
+         height: rem(28);
+
+         transition: fill 0.3s ease;
+
+@include sm-block() {
+            width: rem(28*0.8);
+            height: rem(28*0.8);
+         }  fill: #ccd1d7;
+      }
+      &:hover {
+         svg {
+            fill: $primary-color;
+         }
+      }
+   }
+}
 .details-advantages {
    .swiper-container {
       overflow: visible;
@@ -2135,6 +2218,7 @@ $optionDefaultColours: #ed5565,#fc6e51,#ffce54,#2ecc71,#5d9cec,#ac92ec;
 @include sm-block() {
             flex-grow: initial;
          }  flex-grow: 1;
+
          .label {
             opacity: 0;@include sm-block() {
                opacity: 1;

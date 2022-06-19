@@ -19,7 +19,57 @@ block content
       +e.tag BMW 
       +e.tag X2 F25
 
-
+ +b.SECTION.big-gallery 
+  .container
+   +e.gallery
+     .swiper-container.js-swiper-gal-large
+       +e.prev(ref="prev") 
+        +icon('arrow')
+       
+       +e.next(ref="next")
+         +icon('arrow')
+       .swiper-wrapper
+         .swiper-slide 
+          +b.A(href="https://picsum.photos/id/237/1270/570" data-fancybox="details").slide-large
+           img(src="https://picsum.photos/id/237/1270/570", alt="")
+         .swiper-slide 
+          +b.A(href="https://picsum.photos/id/238/1270/570" data-fancybox="details").slide-large
+           img(src="https://picsum.photos/id/238/1270/570", alt="")
+         .swiper-slide 
+          +b.A(href="https://picsum.photos/id/239/1270/570" data-fancybox="details").slide-large
+           img(src="https://picsum.photos/id/239/1270/570", alt="")
+         .swiper-slide 
+          +b.A(href="https://picsum.photos/id/240/1270/570" data-fancybox="details").slide-large
+           img(src="https://picsum.photos/id/240/1270/570", alt="")
+         .swiper-slide 
+          +b.A(href="https://picsum.photos/id/241/1270/570" data-fancybox="details").slide-large
+           img(src="https://picsum.photos/id/241/1270/570", alt="")
+         .swiper-slide 
+          +b.A(href="https://picsum.photos/id/242/1270/570" data-fancybox="details").slide-large
+           img(src="https://picsum.photos/id/242/1270/570", alt="")
+     +e.thrumbs
+       
+       .swiper-container.js-swiper-gal-small
+         
+         .swiper-wrapper
+           .swiper-slide 
+              +b.slide-small
+               img(src="https://picsum.photos/id/237/190/190", alt="")
+           .swiper-slide 
+              +b.slide-small
+               img(src="https://picsum.photos/id/238/190/190", alt="")
+           .swiper-slide 
+              +b.slide-small
+               img(src="https://picsum.photos/id/239/190/190", alt="")
+           .swiper-slide 
+              +b.slide-small
+               img(src="https://picsum.photos/id/240/190/190", alt="")
+           .swiper-slide 
+              +b.slide-small
+               img(src="https://picsum.photos/id/241/190/190", alt="")
+           .swiper-slide 
+              +b.slide-small
+               img(src="https://picsum.photos/id/242/190/190", alt="")
  include ../includes/modules/_works-accordion
 
 block script

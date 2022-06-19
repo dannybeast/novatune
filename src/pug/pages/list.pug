@@ -1,0 +1,36 @@
+extends ../layout/main
+
+block variables
+    - var title = 'Список страниц';
+    - var description = 'Список страниц';
+    - var pageName = 'index';
+
+block content
+
+ include ../includes/modules/_top
+ +top('<span class="color-primary">Список</span> страниц', 'Список страниц ')
+ +b.SECTION.content-section
+  .container 
+  
+   +b.typography 
+   
+    ul 
+      li 
+       a(href="index.html") Главная
+      li 
+       a(href="reviews.html") Отзывы
+      li 
+       a(href="contacts.html") Контакты
+      li 
+       a(href="services-details.html") Детальная страница услуги
+      li 
+       a(href="services-media.html") Список услуг 1
+      li 
+       a(href="services-model.html") Список услуг 2
+      li 
+       a(href="works-and-services.html") Наши работы (галерея и работы)
+      li 
+       a(href="terms.html") Страница с текстом
+block script
+  //-script(src="assets/js/vendors.js")
+  script(src="assets/js/app.js")

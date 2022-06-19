@@ -59,6 +59,60 @@ sliderMainIntro.init();
  sliderServices.init();
 
 
+
+
+ var large = new Swiper(".js-swiper-gal-large", {
+  loop: true,
+  loopedSlides: 3,
+  freeMode:false,
+  spaceBetween: 10,
+  slidesPerView: 1,
+  effect: 'fade',
+  watchSlidesVisibility: true,  
+  breakpoints: {
+   0: {
+    loopedSlides: 3, 
+   }, 
+
+    768: {    
+     loopedSlides: 6, 
+   },
+ },
+});
+
+var small = new Swiper(".js-swiper-gal-small", {
+  touchRatio: 0.2,
+  slideToClickedSlide: true,
+  loop: true,
+  loopedSlides: 3,
+  spaceBetween: 30,  
+  slidesPerView: 3, 
+  watchSlidesVisibility: true,
+  breakpoints: {
+   0: {
+    spaceBetween: 15, 
+    loopedSlides: 4, 
+    slidesPerView: 4, 
+   }, 
+
+    768: {
+     spaceBetween: 30,     
+     loopedSlides: 6, 
+     slidesPerView: 6, 
+   },
+ },
+  navigation:{
+   prevEl: `.big-gallery  [ref="prev"]`,
+   nextEl: `.big-gallery  [ref="next"]`,
+  
+ }
+});
+if(document.querySelector('.js-swiper-gal-large')){
+ large.controller.control = small;
+ small.controller.control = large;
+}
+
+
  //
  $('.js-anchor').on('click', function(e) {
   e.preventDefault();

@@ -54,6 +54,7 @@
    &__bottom-links {
       @include sm-block() {
          width: 100%;
+         margin-top: rem(15);
 
          text-align: center;
       }
