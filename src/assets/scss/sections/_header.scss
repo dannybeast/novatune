@@ -22,6 +22,7 @@
       padding-left: 15px;
 
       background: #fff;
+      box-shadow: 0 0 50px rgba(0, 0, 0, 0.161);
    }
 
    &__phone {
@@ -30,6 +31,14 @@
       white-space: nowrap;
 
       color: #000;
+   }
+
+   .circle-btn {
+      display: none;
+
+@include md-block() {
+         display: flex;
+      }
    }
    &__row {
       display: flex;
@@ -41,6 +50,7 @@
       display: block;
 
       width: rem(200);
+      margin-top: rem(8);
       margin-right: auto;
    }
    &__element {
@@ -55,7 +65,7 @@
 
       width: 60px;
       height: 80px;
-      margin-left: rem(30);
+      margin-left: rem(10);
 
       cursor: pointer;
 

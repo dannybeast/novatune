@@ -12,7 +12,8 @@ html {
 @include notebookLg(font-size, 14px);
 
 @include lg(font-size, 13px);@include md(font-size, 12px);@include lg-block() {
-      overflow: hidden;
+      overflow-x: hidden;
+      overflow-y: auto;
    }
 }
 
@@ -22,8 +23,6 @@ body {
 
    position: relative;
 
-   overflow: hidden;
-
    min-width: 320px;
    max-width: 100vw;
    margin: 0;
@@ -31,7 +30,14 @@ body {
 
    background-color: #fff;
 
-   -webkit-font-smoothing: antialiased;
+@include lg-block() {
+      overflow-x: hidden;
+      overflow-y: auto;
+   }
+
+@include from($break_lg) {
+      overflow: hidden;
+   }  -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
 
    &:before {

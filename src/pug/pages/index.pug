@@ -49,9 +49,9 @@ block content
   .container 
    +e.H3.title 
     span Почему мы?
-   +e.swiper-container.swiper-container.js-swiper-why.swiper-no-swiping
+   +e.row
 
-    +e.swiper-wrapper.swiper-wrapper 
+    +e.col
      +e.swiper-slide.swiper-slide
       +b.why-item 
        +e.P.title Гарантия сохранности Вашего автомобиля в нашем техцентре
@@ -60,20 +60,20 @@ block content
        +e.icon 
         +icon('shield')
 
-     +e.swiper-slide.swiper-slide
-      +b.why-item 
-       +e.P.title Квалифицированный персонал с опытом работы более 15 лет
-       +e.description 
-        p Мы трепетно относимся к Вашему автомобилю
-       +e.icon 
-        +icon('application')
+    +e.col
+     +b.why-item 
+      +e.P.title Квалифицированный персонал с опытом работы более 15 лет
+      +e.description 
+       p Мы трепетно относимся к Вашему автомобилю
+      +e.icon 
+       +icon('application')
 
-     +e.swiper-slide.swiper-slide
-      +b.why-item(class="--primary")
-       +e.P.title Точный Онлайн расчет стоимости дооснащения для вашего авто
-       +e.bottom 
-        +b.A(href="#" class="btn --black --skew --large __btn" data-src="#callMe" data-fancybox="dialog") 
-         span Расчитать стоимость
+    +e.col
+     +b.why-item(class="--primary")
+      +e.P.title Точный Онлайн расчет стоимости дооснащения для вашего авто
+      +e.bottom 
+       +b.A(href="#" class="btn --black --skew --large __btn" data-src="#callMe" data-fancybox="dialog") 
+        span Расчитать стоимость
 
  include ../includes/modules/_models
 

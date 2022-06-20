@@ -71,7 +71,7 @@ sliderMainIntro.init();
   watchSlidesVisibility: true,  
   breakpoints: {
    0: {
-    loopedSlides: 3, 
+    loopedSlides: 4, 
    }, 
 
     768: {    

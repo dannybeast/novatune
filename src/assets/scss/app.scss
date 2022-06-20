@@ -47,7 +47,7 @@
    transform: translateX(100%);
 
    color: $white;
-   background: $primary-color;
+   background: url('../images/bg/bg2.png') top 0 left no-repeat $primary-color ;
    &__address {
       font-size: 18px;
 
@@ -299,6 +299,10 @@
 }
 
 .big-gallery {
+   picture,
+   img {
+      width: 100%;
+   }
    .js-swiper-gal-large {
       position: relative;
 
@@ -1775,6 +1779,10 @@
 @include notebook-block() {
          height: auto;
          padding-top: rem(40);
+      }
+
+@include sm-block() {
+         padding-top: 0;
       }  align-items: center;
    }
    &__content,
@@ -1800,6 +1808,11 @@
 
 @include notebook-block() {
             margin-left: 6%;
+         }
+
+@include sm-block() {
+            max-width: 150%;
+            margin-left: 20%;
          }
       }
    }
@@ -1910,6 +1923,20 @@ $speed: 0.15s;
    position: relative;
    &--primary {
       color: $white;
+
+@include md-block() {
+         padding-right: 30px;
+         padding-left: 30px;
+
+         text-align: center;
+      }
+
+      .why-item__title {
+         @include md-block() {
+            margin-right: auto;
+            margin-left: auto;
+         }
+      }
       &:before {
          position: absolute;
          top: 50%;
@@ -1927,6 +1954,13 @@ $speed: 0.15s;
 
 @include lg-block() {
             left: 38%;
+         }
+
+@include md-block() {
+            left: 46%;
+
+            width: 90%;
+            height: 140%;
          }
       }
       .btn {
@@ -1954,12 +1988,11 @@ $speed: 0.15s;
 
       max-width: 295px;
       margin-bottom: rem(25);
-      padding-right: rem(30);
 
       text-transform: uppercase;
 
 @include md-block() {
-         font-size: 14px;
+         font-size: 12px;
       }
    }
    &__description {
@@ -1986,7 +2019,26 @@ $speed: 0.15s;
    }
 }
 
+.circle-btn {
+   width: rem(45);
+   height: rem(45);
+
+   border-radius: 50%;
+   background: $primary-color;
+
+   align-items: center;
+   justify-content: center;
+   svg {
+      width: rem(20);
+      height: rem(20);
+
+      fill: #fff;
+   }
+}
+
 .why {
+   $space: rem(120);
+
    padding-bottom: rem(40);
 
 @include sm-block() {
@@ -1998,6 +2050,32 @@ $speed: 0.15s;
 
 @include lg-block() {
          width: 100%;
+      }
+   }
+   &__row {
+      @include u-row-flex($space);
+
+@include md-block() {
+         margin-bottom: rem(-60);
+
+@include u-row-flex($space/3);
+      }
+   }
+   &__col {
+      @include u-col($space);
+
+@include u-size(4,12, $space);
+
+@include md-block() {
+         margin-bottom: rem(60);
+
+@include u-col($space/3);
+
+@include u-size(6,12, $space/3);
+
+         &:last-child {
+            @include u-size(12,12, $space/3);
+         }
       }
    }
    &__title {
@@ -2043,10 +2121,6 @@ $speed: 0.15s;
             left: rem(120);
 
             height: rem(40);
-         }
-
-@include sm-block() {
-            display: none;
          }  flex-grow: 1;
       }
    }
@@ -2138,8 +2212,9 @@ $optionDefaultColours: #ed5565,#fc6e51,#ffce54,#2ecc71,#5d9cec,#ac92ec;
       transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
 
       border-radius: rem(16);
+      background-repeat: no-repeat;
       background-position: center;
-      background-size: auto 120%;
+      background-size: cover;
 
 @include sm-block() {
          width: 100%;
@@ -2152,7 +2227,8 @@ $optionDefaultColours: #ed5565,#fc6e51,#ffce54,#2ecc71,#5d9cec,#ac92ec;
             transform: scale(1);
 
             border-radius: rem(16);
-            background-size: auto 100%;@include sm-block() {
+
+@include sm-block() {
                flex-grow: initial;
             }  flex-grow: 10000;
 
@@ -2198,7 +2274,7 @@ $optionDefaultColours: #ed5565,#fc6e51,#ffce54,#2ecc71,#5d9cec,#ac92ec;
 
          opacity: 0;
          background: rgb(0,0,0);
-         background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5702030812324934) 100%);
+         background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.7) 100%);
 
 @include sm-block() {
             opacity: 1;
@@ -2237,8 +2313,12 @@ $optionDefaultColours: #ed5565,#fc6e51,#ffce54,#2ecc71,#5d9cec,#ac92ec;
          padding: rem(40) rem(60);
 
          color: #fff;
-         border-top: 1px solid $primary-color;@include sm-block() {
+         border-top: 1px solid $primary-color;
+
+@include sm-block() {
             padding: rem(20) rem(30);
+
+            border-top: none;
          }
       }
    }

@@ -1,22 +1,25 @@
 .main-layout {
    display: flex;
-   overflow: hidden;
-   overflow-y: auto;
    flex-direction: column;
 
-   height: 100vh;
+@include from($break_lg) {
+      overflow: hidden;
+      overflow-y: auto;
 
-
+      height: 100vh;
+   }
 
    &__row {
       display: flex;
 
       background: url('../images/bg/bg.png') top right no-repeat, url('../images/bg/bg2.png') top 100vh left no-repeat;
-@include lg-block() {
-         padding-top: 120px;
-      }
 
-      flex-grow: 1;
+@include lg-block() {
+         overflow: hidden;
+
+         width: 100vw;
+         padding-top: 120px;
+      }  flex-grow: 1;
    }
    &__hamburger {
       display: flex;
@@ -64,6 +67,7 @@
       width: 100%;
       padding-bottom: rem(30);
    }
+
 
    .footer {
       margin-top: auto;
